@@ -1,0 +1,14 @@
+{
+  "tokenizer": "builtin",
+  "revision": null,
+  "seed": 42,
+  "entries": 29,
+  "pool_size": 59,
+  "isl": 8192,
+  "osl": 512,
+  "sha256": "bd3df8bfe9423ab943345bc13ea96e140dcc958157b86916ea4a3be6dc2be9eb",
+  "tokenizer_class": "Tokenizer",
+  "tokenizer_commit": null,
+  "prompt_format": "text",
+  "input_length_basis": "tiktoken/o200k_base"
+}

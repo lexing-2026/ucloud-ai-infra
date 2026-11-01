@@ -1,0 +1,456 @@
+== N=34816 K=5120 M=11
+  promote 0.271ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.255ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.256ms {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}: out of resource: shared memory, Required: 136192, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 4}
+{"N": 34816, "K": 5120, "M": 11, "reference_ms": 0.3198, "best_ms": 0.2557, "speedup": 1.251, "tried": 54, "config": {"BLOCK_SIZE_M": 8, "BLOCK_SIZE_N": 32, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=16384 K=5120 M=11
+  promote 0.153ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.150ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.147ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 16384, "K": 5120, "M": 11, "reference_ms": 0.1579, "best_ms": 0.1464, "speedup": 1.078, "tried": 32, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 32, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=14336 K=5120 M=11
+  promote 0.092ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.084ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.082ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3}
+{"N": 14336, "K": 5120, "M": 11, "reference_ms": 0.1111, "best_ms": 0.0794, "speedup": 1.4, "tried": 37, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 8, "num_stages": 3}}
+== N=5120 K=17408 M=11
+  promote 0.170ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.165ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.159ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 4}
+{"N": 5120, "K": 17408, "M": 11, "reference_ms": 0.2089, "best_ms": 0.1587, "speedup": 1.316, "tried": 31, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 32, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=5120 K=6144 M=11
+  promote 0.078ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 6}
+{"N": 5120, "K": 6144, "M": 11, "reference_ms": 0.1134, "best_ms": 0.0786, "speedup": 1.443, "tried": 29, "config": {"BLOCK_SIZE_M": 8, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=34816 K=5120 M=22
+  promote 0.270ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.259ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 5}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 3}
+{"N": 34816, "K": 5120, "M": 22, "reference_ms": 0.3207, "best_ms": 0.2593, "speedup": 1.236, "tried": 32, "config": {"BLOCK_SIZE_M": 8, "BLOCK_SIZE_N": 32, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=16384 K=5120 M=22
+  promote 0.155ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.152ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4}
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.150ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 5}
+{"N": 16384, "K": 5120, "M": 22, "reference_ms": 0.1587, "best_ms": 0.1503, "speedup": 1.056, "tried": 46, "config": {"BLOCK_SIZE_M": 8, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 4, "SWAP_AB": true}}
+== N=14336 K=5120 M=22
+  promote 0.101ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.091ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.089ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 349184, Hardware limit: 101376. Reduci
+{"N": 14336, "K": 5120, "M": 22, "reference_ms": 0.1066, "best_ms": 0.0852, "speedup": 1.251, "tried": 44, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=22
+  promote 0.168ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.164ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.160ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.158ms {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}: out of resource: shared memory, Required: 136192, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 184320, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 184320, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 4}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+{"N": 5120, "K": 17408, "M": 22, "reference_ms": 0.2096, "best_ms": 0.1575, "speedup": 1.331, "tried": 53, "config": {"SWAP_AB": true, "SPLIT_K": 1, "BLOCK_SIZE_M": 8, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 16, "num_warps": 4, "num_stages": 5}}
+== N=5120 K=6144 M=22
+  promote 0.082ms {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+{"N": 5120, "K": 6144, "M": 22, "reference_ms": 0.1117, "best_ms": 0.0822, "speedup": 1.359, "tried": 26, "config": {"BLOCK_SIZE_M": 8, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=34816 K=5120 M=33
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.313ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 2}
+  promote 0.294ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 2}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 4}: out of resource: shared memory, Required: 203776, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 5}: out of resource: shared memory, Required: 131072, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 34816, "K": 5120, "M": 33, "reference_ms": 0.3228, "best_ms": 0.2927, "speedup": 1.103, "tried": 36, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SPLIT_K": 2}}
+== N=16384 K=5120 M=33
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 5}
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 349184, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 4}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 16384, "K": 5120, "M": 33, "reference_ms": 0.1567, "best_ms": 0.1565, "speedup": 1.002, "tried": 32, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=14336 K=5120 M=33
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.101ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 14336, "K": 5120, "M": 33, "reference_ms": 0.109, "best_ms": 0.1032, "speedup": 1.056, "tried": 31, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=33
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.195ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.181ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  promote 0.172ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  promote 0.166ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  promote 0.162ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False, 'SPLIT_K': 1}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 4}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 17408, "M": 33, "reference_ms": 0.2115, "best_ms": 0.1631, "speedup": 1.297, "tried": 56, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true, "SPLIT_K": 1}}
+== N=5120 K=6144 M=33
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.107ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.095ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True, 'SPLIT_K': 2}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 6144, "M": 33, "reference_ms": 0.1136, "best_ms": 0.0967, "speedup": 1.176, "tried": 31, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true, "SPLIT_K": 2}}
+== N=34816 K=5120 M=44
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.312ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 2}
+  promote 0.299ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 2}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 2}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 34816, "K": 5120, "M": 44, "reference_ms": 0.3216, "best_ms": 0.2998, "speedup": 1.073, "tried": 36, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SPLIT_K": 2}}
+== N=16384 K=5120 M=44
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.156ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 245760, Hardware limit: 101376. Reduci
+{"N": 16384, "K": 5120, "M": 44, "reference_ms": 0.1608, "best_ms": 0.1547, "speedup": 1.039, "tried": 39, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=14336 K=5120 M=44
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.101ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 3}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 14336, "K": 5120, "M": 44, "reference_ms": 0.107, "best_ms": 0.1012, "speedup": 1.057, "tried": 33, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=44
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.195ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.182ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  promote 0.172ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  promote 0.166ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  promote 0.163ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False, 'SPLIT_K': 1}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 2}
+{"N": 5120, "K": 17408, "M": 44, "reference_ms": 0.2126, "best_ms": 0.1622, "speedup": 1.31, "tried": 57, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true, "SPLIT_K": 1}}
+== N=5120 K=6144 M=44
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.106ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.095ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True, 'SPLIT_K': 2}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 185344, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}
+{"N": 5120, "K": 6144, "M": 44, "reference_ms": 0.1113, "best_ms": 0.094, "speedup": 1.183, "tried": 32, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true, "SPLIT_K": 2}}
+== N=34816 K=5120 M=55
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.280ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 5}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 4}: out of resource: shared memory, Required: 105472, Hardware limit: 101376. Reduci
+{"N": 34816, "K": 5120, "M": 55, "reference_ms": 0.3004, "best_ms": 0.2794, "speedup": 1.075, "tried": 36, "config": {"BLOCK_SIZE_M": 16, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=16384 K=5120 M=55
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.158ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}
+{"N": 16384, "K": 5120, "M": 55, "reference_ms": 0.1634, "best_ms": 0.1602, "speedup": 1.02, "tried": 39, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3}}
+== N=14336 K=5120 M=55
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.117ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.108ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reduci
+{"N": 14336, "K": 5120, "M": 55, "reference_ms": 0.1076, "best_ms": 0.1068, "speedup": 1.007, "tried": 35, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=55
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.193ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.179ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  promote 0.175ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  promote 0.172ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 1}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False, 'SPLIT_K': 1}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 3}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 17408, "M": 55, "reference_ms": 0.2134, "best_ms": 0.1712, "speedup": 1.247, "tried": 53, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 32, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true, "SPLIT_K": 1}}
+== N=5120 K=6144 M=55
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.107ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.095ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True, 'SPLIT_K': 2}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True, 'SPLIT_K': 2}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 6144, "M": 55, "reference_ms": 0.1116, "best_ms": 0.095, "speedup": 1.175, "tried": 30, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true, "SPLIT_K": 2}}
+== N=34816 K=5120 M=66
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.294ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.288ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.283ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.274ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 111616, Hardware limit: 101376. Reduci
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 175104, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 5}
+{"N": 34816, "K": 5120, "M": 66, "reference_ms": 0.3032, "best_ms": 0.273, "speedup": 1.11, "tried": 57, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 4, "SWAP_AB": true}}
+== N=16384 K=5120 M=66
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.162ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 3}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 369664, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 4}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 16384, "K": 5120, "M": 66, "reference_ms": 0.1651, "best_ms": 0.1626, "speedup": 1.015, "tried": 33, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=14336 K=5120 M=66
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.137ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.132ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 5}: out of resource: shared memory, Required: 262656, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 5}: out of resource: shared memory, Required: 271360, Hardware limit: 101376. Reduci
+{"N": 14336, "K": 5120, "M": 66, "reference_ms": 0.1447, "best_ms": 0.1336, "speedup": 1.084, "tried": 40, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=66
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.195ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.181ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.175ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 5}
+  skip {'SWAP_AB': False, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 3}: out of resource: shared memory, Required: 131584, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 17408, "M": 66, "reference_ms": 0.2147, "best_ms": 0.1752, "speedup": 1.225, "tried": 38, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=6144 M=66
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.107ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.098ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.094ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.088ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 111616, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 369664, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3}: out of resource: shared memory, Required: 140288, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 6144, "M": 66, "reference_ms": 0.1134, "best_ms": 0.0887, "speedup": 1.279, "tried": 52, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 4, "SWAP_AB": true}}
+== N=34816 K=5120 M=77
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.298ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  skip {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.293ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.287ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4}: out of resource: shared memory, Required: 148480, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 3}
+{"N": 34816, "K": 5120, "M": 77, "reference_ms": 0.3037, "best_ms": 0.2876, "speedup": 1.056, "tried": 61, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=16384 K=5120 M=77
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.162ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 5}
+  skip {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 3}: out of resource: shared memory, Required: 131072, Hardware limit: 101376. Reduci
+{"N": 16384, "K": 5120, "M": 77, "reference_ms": 0.1668, "best_ms": 0.164, "speedup": 1.017, "tried": 35, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=14336 K=5120 M=77
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.138ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.133ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 64, 'num_warps': 4, 'num_stages': 4}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 327680, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 5}: out of resource: shared memory, Required: 147456, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 14336, "K": 5120, "M": 77, "reference_ms": 0.1453, "best_ms": 0.1322, "speedup": 1.099, "tried": 40, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=77
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.197ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.182ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.177ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.174ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.170ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 5, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 5, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 5, 'SWAP_AB': True}: out of resource: shared memory, Required: 148480, Hardware limit: 101376. Reduci
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 5, 'SWAP_AB': True}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 1, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 17408, "M": 77, "reference_ms": 0.2147, "best_ms": 0.1689, "speedup": 1.271, "tried": 52, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 5, "SWAP_AB": true}}
+== N=5120 K=6144 M=77
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.107ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.099ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.093ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.089ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 111616, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 2}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 6144, "M": 77, "reference_ms": 0.1146, "best_ms": 0.0894, "speedup": 1.283, "tried": 53, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 4, "SWAP_AB": true}}
+== N=34816 K=5120 M=88
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SPLIT_K': 1}: 'Keyword argument SPLIT_K was specified but unrecognised'
+  promote 0.295ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.287ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3}
+  promote 0.281ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.275ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 111616, Hardware limit: 101376. Reduci
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 5}: out of resource: shared memory, Required: 147456, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 4}
+  skip {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 4}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 34816, "K": 5120, "M": 88, "reference_ms": 0.3052, "best_ms": 0.2746, "speedup": 1.111, "tried": 55, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 4, "SWAP_AB": true}}
+== N=16384 K=5120 M=88
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.161ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 64, 'num_warps': 8, 'num_stages': 2}
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 128, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 64, 'GROUP_SIZE_M': 16, 'num_warps': 4, 'num_stages': 6}: out of resource: shared memory, Required: 123904, Hardware limit: 101376. Reduci
+{"N": 16384, "K": 5120, "M": 88, "reference_ms": 0.1628, "best_ms": 0.1604, "speedup": 1.015, "tried": 34, "config": {"BLOCK_SIZE_M": 64, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=14336 K=5120 M=88
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.137ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.131ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': True, 'SPLIT_K': 8, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 6}: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reduci
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 4, 'BLOCK_SIZE_M': 8, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 6}
+{"N": 14336, "K": 5120, "M": 88, "reference_ms": 0.1454, "best_ms": 0.1323, "speedup": 1.099, "tried": 38, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}
+== N=5120 K=17408 M=88
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.199ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.179ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.173ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.170ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 256, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}: out of resource: shared memory, Required: 111616, Hardware limit: 101376. Reduci
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 4, 'SWAP_AB': True}
+  reject incorrect {'SWAP_AB': True, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 3}
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 32, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 3}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 32, 'GROUP_SIZE_M': 1, 'num_warps': 4, 'num_stages': 2}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  skip {'SWAP_AB': False, 'SPLIT_K': 1, 'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 8, 'num_stages': 5}: 'Keyword argument SWAP_AB was specified but unrecognised'
+{"N": 5120, "K": 17408, "M": 88, "reference_ms": 0.2156, "best_ms": 0.1707, "speedup": 1.263, "tried": 53, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 64, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 4, "SWAP_AB": true}}
+== N=5120 K=6144 M=88
+  skip {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  promote 0.108ms {'BLOCK_SIZE_M': 64, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.106ms {'BLOCK_SIZE_M': 16, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  promote 0.088ms {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  reject incorrect {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': True}
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 6, 'SWAP_AB': True}: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reduci
+  skip {'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 128, 'BLOCK_SIZE_K': 128, 'GROUP_SIZE_M': 32, 'num_warps': 4, 'num_stages': 3, 'SWAP_AB': False}: 'Keyword argument SWAP_AB was specified but unrecognised'
+  reject incorrect {'SWAP_AB': False, 'SPLIT_K': 2, 'BLOCK_SIZE_M': 32, 'BLOCK_SIZE_N': 64, 'BLOCK_SIZE_K': 256, 'GROUP_SIZE_M': 16, 'num_warps': 8, 'num_stages': 3}
+{"N": 5120, "K": 6144, "M": 88, "reference_ms": 0.1148, "best_ms": 0.0888, "speedup": 1.293, "tried": 37, "config": {"BLOCK_SIZE_M": 32, "BLOCK_SIZE_N": 128, "BLOCK_SIZE_K": 128, "GROUP_SIZE_M": 32, "num_warps": 4, "num_stages": 3, "SWAP_AB": true}}

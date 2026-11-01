@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 8,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 4378.1370413899995,
+      "p50": 3753.139798,
+      "p95": 7734.2134142999985,
+      "p99": 10865.73003922002
+    },
+    "inter_token_latency": {
+      "mean": 22.237391597827788,
+      "p50": 20.54614208708415,
+      "p95": 37.79837763522504,
+      "p99": 55.801188736340535
+    },
+    "request_latency": {
+      "mean": 15741.444147879998,
+      "p50": 15253.480112,
+      "p95": 25900.398617349998,
+      "p99": 33150.73130213001
+    }
+  },
+  "benchmark_duration": 201.260040448,
+  "request_throughput": 0.49686041554570204,
+  "output_token_throughput": 254.39253275939944,
+  "artifacts": "/root/infer/outputs/perf_z13/performance/c8"
+}

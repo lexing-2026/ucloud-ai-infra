@@ -1,0 +1,15 @@
+ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.ttir
+ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.ttgir
+ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.llir
+ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.ptx
+ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.cubin
+ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.sass
+PTX ptxd/TX3BTR4NMU3NPDVMCPA4KRY6RR36ZQTXLHFQ6QQWTJ7HHFQLQHAQ/_peak.ptx 1421
+block // instr 327 [('mov.b32', 129), ('add.s32', 57), ('mov.u32', 49), ('xor.b32', 22), ('st.shared::cta.v2.b32', 16), ('add.s64', 14), ('ld.global.v4.b32', 12), ('and.b32', 7), ('shl.b32', 4)]
+block $L__BB0_2:                     instr 309 [('ld.shared.b8', 128), ('prmt.b32', 96), ('mma.sync.aligned.m16n8k32.row.col.f32.e4m3.e4m3.f32', 64), ('ldmatrix.sync.aligned.m8n8.x4.shared.b16', 16), ('$L__BB0_2:', 1), ('bar.sync', 1), ('add.s32', 1), ('setp.ne.b32', 1), ('bra', 1)]
+block $L__BB0_3:                     instr 109 [('st.shared::cta.v4.b32', 16), ('ld.shared.v4.b32', 16), ('st.global.v4.b32', 16), ('add.s64', 15), ('and.b32', 9), ('bar.sync', 8), ('add.s32', 7), ('shl.b32', 6), ('or.b32', 4)]
+789:	mma.sync.aligned.m16n8k32.row.col.f32.e4m3.e4m3.f32 { %r531, %r532, %r533, %r534 }, { %r145, %r146, %r147, %r148 }, { %r153, %r154 }, { %r531, %r
+794:	mma.sync.aligned.m16n8k32.row.col.f32.e4m3.e4m3.f32 { %r535, %r536, %r537, %r538 }, { %r145, %r146, %r147, %r148 }, { %r155, %r156 }, { %r535, %r
+6:.target sm_89
+20:.reqntid 128
+23:	.reg .b32 	%r<595>;

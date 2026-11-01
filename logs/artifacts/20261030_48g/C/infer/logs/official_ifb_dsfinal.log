@@ -1,0 +1,6 @@
+需要准备隔离评测环境：/root/.cache/ai-infra-eval/envs
+缺失项：{"accuracy": ["nltk:punkt_tab", "nltk:stopwords", "nltk:averaged_perceptron_tagger_eng"]}
+错误：非交互环境不安装依赖。请在交互终端重新运行并确认以上操作。
+  /usr/local/bin/uv pip install --python /root/.cache/ai-infra-eval/envs/evalscope-1.13.0/bin/python 'evalscope[ifbench]==1.13.0'
+  /root/.cache/ai-infra-eval/envs/evalscope-1.13.0/bin/python -m nltk.downloader -d /root/.cache/ai-infra-eval/envs/nltk_data punkt_tab stopwords averaged_perceptron_tagger_eng
+OFFICIAL_DONE

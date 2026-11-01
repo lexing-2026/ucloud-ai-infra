@@ -1,0 +1,4 @@
+warm 8192 prefill s 1.814
+profiled 8192 prefill s 1.793
+b'Stop profiling. This will take some time.\n'
+PROF_END

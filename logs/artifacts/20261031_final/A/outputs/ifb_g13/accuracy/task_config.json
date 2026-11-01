@@ -1,0 +1,16 @@
+{
+  "model": "qwen3.8-27b-fp8",
+  "api_url": "http://127.0.0.1:30000/v1",
+  "api_key_env": "OPENAI_API_KEY",
+  "eval_type": "openai_api",
+  "datasets": [
+    "ifbench"
+  ],
+  "limit": 100,
+  "eval_batch_size": 2,
+  "generation_config": {
+    "max_tokens": 32768
+  },
+  "work_dir": "/root/infer/outputs/ifb_g13/accuracy/native",
+  "no_timestamp": true
+}

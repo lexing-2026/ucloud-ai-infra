@@ -1,0 +1,2 @@
+{"tag": "soakfinal", "c": 8, "requests": 1000, "ok": 1000, "wall_s": 2897.0, "ttft_p50": 4372.07, "ttft_p95": 6970.63, "tpot_p50": 35.8, "tpot_p95": 66.68, "e2e_p50": 22.72, "e2e_p95": 38.98, "out_tok_s": 176.73, "isl": [8192], "osl": [512], "seed": 1504164065, "shared_prefix": 0}
+GATE_DONE

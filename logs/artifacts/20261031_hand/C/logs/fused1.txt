@@ -1,0 +1,9 @@
+built
+Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=2048,K=5120,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+{"N": 2048, "M": 64, "q_vs_y": 0.021612370386719704, "ref_vs_y": 0.021327180787920952, "scale_rel": 0.011532790027558804, "nan": 0, "inf": 0}
+{"N": 2048, "M": 200, "q_vs_y": 0.021623259410262108, "ref_vs_y": 0.021355560049414635, "scale_rel": 0.01125914603471756, "nan": 0, "inf": 0}
+Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=4096,K=5120,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+{"N": 4096, "M": 300, "q_vs_y": 0.02156839706003666, "ref_vs_y": 0.021293891593813896, "scale_rel": 0.011028947308659554, "nan": 0, "inf": 0}
+{"N": 34816, "M": 1024, "q_vs_y": 0.02158772200345993, "ref_vs_y": 0.02131340093910694, "scale_rel": 0.012542136944830418, "nan": 0, "inf": 0}
+FUSED_CHECK_END
+RUN_END

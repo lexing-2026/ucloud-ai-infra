@@ -1,0 +1,269 @@
+# AI Infras 比赛评测报告
+
+- 模型：`qwen3.8-27b-fp8`
+- API：`http://127.0.0.1:30000/v1`
+- 开始：2026-10-30T14:00:28.776062+00:00
+- 结束：2026-10-30T14:33:59.711536+00:00
+- 总体状态：**完整**
+
+## 性能测试
+
+输入目标 8192 按内置 tiktoken/o200k_base 计数；OSL=512 按服务端计数；并发 1/2/4/8；每档预热 8 请求，不计入正式统计。
+延迟包含评测机到 API 的网络开销，不设置 TTFT/TPOT 达标门槛。
+
+| 并发 | 状态 | 成功请求 | 错误请求 | 请求/s | 输出 token/s |
+|---:|---|---:|---:|---:|---:|
+| 1 | 完整 | 100.0 | 0 | 0.13590 | 69.58 |
+| 2 | 完整 | 100.0 | 0 | 0.20947 | 107.25 |
+| 4 | 完整 | 100.0 | 0 | 0.28926 | 148.10 |
+| 8 | 完整 | 100.0 | 0 | 0.35889 | 183.75 |
+
+| 并发 | 服务端实际输入 token 均值 | 最小 | 最大 |
+|---:|---:|---:|---:|
+| 1 | 8192.0 | 8192 | 8192 |
+| 2 | 8192.0 | 8192 | 8192 |
+| 4 | 8192.0 | 8192 | 8192 |
+| 8 | 8192.0 | 8192 | 8192 |
+
+tiktoken 与模型分词可能不同，因此服务端实际 ISL 不保证等于 8192；上表使用服务端 usage。
+完整状态表示请求、输出长度和统计完整，不表示模型端 ISL 恰为 8192。
+
+| 并发 | 指标 | 平均 | P50 | P95 | P99 |
+|---:|---|---:|---:|---:|---:|
+| 1 | TTFT（秒） | 1.886 | 1.888 | 1.891 | 1.893 |
+| 1 | TPOT（毫秒/token） | 10.703 | 10.064 | 13.897 | 15.968 |
+| 1 | 端到端（秒） | 7.355 | 7.030 | 8.990 | 10.048 |
+| 2 | TTFT（秒） | 2.049 | 1.941 | 3.691 | 3.748 |
+| 2 | TPOT（毫秒/token） | 14.668 | 14.100 | 19.141 | 21.695 |
+| 2 | 端到端（秒） | 9.544 | 9.149 | 12.204 | 13.313 |
+| 4 | TTFT（秒） | 2.189 | 1.954 | 3.757 | 7.404 |
+| 4 | TPOT（毫秒/token） | 22.580 | 22.122 | 28.473 | 32.941 |
+| 4 | 端到端（秒） | 13.728 | 13.284 | 17.999 | 20.422 |
+| 8 | TTFT（秒） | 2.844 | 1.969 | 7.483 | 14.802 |
+| 8 | TPOT（毫秒/token） | 37.356 | 36.780 | 54.559 | 64.961 |
+| 8 | 端到端（秒） | 21.933 | 21.362 | 32.155 | 36.817 |
+
+TPOT 为每请求 `(端到端延迟 − TTFT)/(输出 token 数 − 1)` 后取百分位；不使用逐块间隔的 P95。
+使用相同确定性输入及顺序，每轮请求传独立 cache_salt 避免跨档缓存复用；未通过服务器遥测独立验证缓存命中。
+
+## IFBench 精度
+
+EvalScope 原生评测，limit=100，eval_batch_size=2；生成参数仅覆盖 `max_tokens=32768`，其余沿用工具默认值。
+本次未执行精度阶段。
+
+## 异常与证据
+
+- 未发现完整性异常。
+
+- [结构化汇总](summary.json)
+- [环境与依赖版本](environment.json)
+- [评测输入配置](configuration.json)
+- 性能原生结果：`performance/c{1,2,4,8}/`；完整输入及其摘要：`performance/dataset.*`。
+- 精度原生结果：`accuracy/native/`；输入配置及解析后的默认配置：`accuracy/task_config.json`、`accuracy/resolved_config.json`。
+
+工具固定为 AIPerf 0.13.0、EvalScope 1.13.0。结果仅适用于本次模型、API 路径、样本和网络环境。
+{
+  "started_at": "2026-10-30T14:00:28.776062+00:00",
+  "configuration": {
+    "mode": "perf",
+    "base_url": "http://127.0.0.1:30000/v1",
+    "model": "qwen3.8-27b-fp8",
+    "tokenizer": "builtin",
+    "tokenizer_revision": null,
+    "api_key_env": "OPENAI_API_KEY",
+    "output_dir": "/root/infer/outputs/perf_tuned_n100_r2",
+    "env_dir": "/root/.cache/ai-infra-eval/envs",
+    "perf_requests": 100,
+    "eval_batch_size": 2,
+    "request_timeout": 600,
+    "seed": 42,
+    "dry_run": false,
+    "isl": 8192,
+    "osl": 512,
+    "concurrencies": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "warmup_requests": 8,
+    "accuracy_limit": 100,
+    "accuracy_generation_config": {
+      "max_tokens": 32768
+    }
+  },
+  "status": "完整",
+  "issues": [],
+  "performance": [
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 1,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 1886.2640480799998,
+          "p50": 1887.5645949999998,
+          "p95": 1891.3601705,
+          "p99": 1892.7545675499998
+        },
+        "inter_token_latency": {
+          "mean": 10.702591362759295,
+          "p50": 10.064332457925635,
+          "p95": 13.896738236692757,
+          "p99": 15.967567937397261
+        },
+        "request_latency": {
+          "mean": 7355.288234449999,
+          "p50": 7030.379242999999,
+          "p95": 8989.948717,
+          "p99": 10047.688468530001
+        }
+      },
+      "benchmark_duration": 735.8392985600001,
+      "request_throughput": 0.13589846308849546,
+      "output_token_throughput": 69.58001310130967,
+      "artifacts": "/root/infer/outputs/perf_tuned_n100_r2/performance/c1"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 2,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2048.5865560099996,
+          "p50": 1941.349669,
+          "p95": 3691.4947226499994,
+          "p99": 3747.92970789
+        },
+        "inter_token_latency": {
+          "mean": 14.66772056847358,
+          "p50": 14.099806008806262,
+          "p95": 19.141221691976515,
+          "p99": 21.694641410352254
+        },
+        "request_latency": {
+          "mean": 9543.791766499999,
+          "p50": 9148.668184,
+          "p95": 12204.3438567,
+          "p99": 13313.491696919999
+        }
+      },
+      "benchmark_duration": 477.38280166400006,
+      "request_throughput": 0.20947385978477492,
+      "output_token_throughput": 107.25061620980476,
+      "artifacts": "/root/infer/outputs/perf_tuned_n100_r2/performance/c2"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 4,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2189.3046815899997,
+          "p50": 1953.9422384999998,
+          "p95": 3757.4069548999996,
+          "p99": 7403.54436608
+        },
+        "inter_token_latency": {
+          "mean": 22.58017545634051,
+          "p50": 22.122414972602737,
+          "p95": 28.47274306956947,
+          "p99": 32.940924284422714
+        },
+        "request_latency": {
+          "mean": 13727.77433978,
+          "p50": 13283.940464,
+          "p95": 17998.8428472,
+          "p99": 20421.98535482
+        }
+      },
+      "benchmark_duration": 345.711069184,
+      "request_throughput": 0.2892557837497405,
+      "output_token_throughput": 148.09896127986713,
+      "artifacts": "/root/infer/outputs/perf_tuned_n100_r2/performance/c4"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 8,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2843.59367445,
+          "p50": 1968.5073905,
+          "p95": 7483.386270249994,
+          "p99": 14802.155014839998
+        },
+        "inter_token_latency": {
+          "mean": 37.35639746072407,
+          "p50": 36.78044214677104,
+          "p95": 54.558946201859094,
+          "p99": 64.96147027088065
+        },
+        "request_latency": {
+          "mean": 21932.71277688,
+          "p50": 21361.9723345,
+          "p95": 32155.165774649995,
+          "p99": 36816.73392283002
+        }
+      },
+      "benchmark_duration": 278.636544,
+      "request_throughput": 0.3588851587728492,
+      "output_token_throughput": 183.7492012916988,
+      "artifacts": "/root/infer/outputs/perf_tuned_n100_r2/performance/c8"
+    }
+  ],
+  "ended_at": "2026-10-30T14:33:59.711536+00:00"
+}
+

@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 4,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 2543.4456712,
+      "p50": 1684.3220855,
+      "p95": 6401.522853299999,
+      "p99": 6420.13170106
+    },
+    "inter_token_latency": {
+      "mean": 13.441700023679061,
+      "p50": 10.622229539138942,
+      "p95": 34.14065248825832,
+      "p99": 39.60494785812132
+    },
+    "request_latency": {
+      "mean": 9412.1543833,
+      "p50": 8213.2085885,
+      "p95": 19128.0781707,
+      "p99": 21920.453035739993
+    }
+  },
+  "benchmark_duration": 49.002020352,
+  "request_throughput": 0.40782384658561815,
+  "output_token_throughput": 208.8058094518365,
+  "artifacts": "/root/infer/outputs/perf_t13q/performance/c4"
+}

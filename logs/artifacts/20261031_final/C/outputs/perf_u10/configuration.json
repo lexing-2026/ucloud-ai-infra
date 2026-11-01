@@ -1,0 +1,28 @@
+{
+  "mode": "perf",
+  "base_url": "http://127.0.0.1:30000/v1",
+  "model": "qwen3.8-27b-fp8",
+  "tokenizer": "builtin",
+  "tokenizer_revision": null,
+  "api_key_env": "OPENAI_API_KEY",
+  "output_dir": "/root/infer/outputs/perf_u10",
+  "env_dir": "/root/.cache/ai-infra-eval/envs",
+  "perf_requests": 20,
+  "eval_batch_size": 2,
+  "request_timeout": 600,
+  "seed": 42,
+  "dry_run": false,
+  "isl": 8192,
+  "osl": 512,
+  "concurrencies": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "warmup_requests": 8,
+  "accuracy_limit": 100,
+  "accuracy_generation_config": {
+    "max_tokens": 32768
+  }
+}

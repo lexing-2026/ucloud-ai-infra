@@ -1,0 +1,3 @@
+{"tag": "soak_fhw", "c": 8, "requests": 1000, "ok": 1000, "wall_s": 3054.73, "ttft_p50": 4914.77, "ttft_p95": 7624.69, "tpot_p50": 35.64, "tpot_p95": 70.68, "e2e_p50": 23.35, "e2e_p95": 41.09, "out_tok_s": 167.61, "isl": [8192], "osl": [512], "seed": 1243883106, "shared_prefix": 0}
+1
+SOAK_DONE

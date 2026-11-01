@@ -1,0 +1,3 @@
+{"tag": "tuned", "c": 1, "requests": 6, "ok": 6, "wall_s": 49.56, "ttft_p50": 1880.85, "ttft_p95": 1885.18, "tpot_p50": 11.7, "tpot_p95": 17.59, "e2e_p50": 7.85, "e2e_p95": 10.87, "out_tok_s": 61.98, "isl": [8192], "osl": [512], "seed": 1376224363, "shared_prefix": 0}
+{"tag": "tuned", "c": 8, "requests": 24, "ok": 24, "wall_s": 71.77, "ttft_p50": 3776.4, "ttft_p95": 14891.78, "tpot_p50": 30.13, "tpot_p95": 52.35, "e2e_p50": 21.86, "e2e_p95": 36.08, "out_tok_s": 171.2, "isl": [8192], "osl": [512], "seed": 1606398945, "shared_prefix": 0}
+QUICK_DONE

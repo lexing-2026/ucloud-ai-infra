@@ -1,0 +1,6 @@
+{
+  "model": "qwen3.8-27b-awq",
+  "prompt": "Hello",
+  "max_tokens": 8,
+  "temperature": 0
+}

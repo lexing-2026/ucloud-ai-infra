@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 2,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 1978.9368067999999,
+      "p50": 1668.1600329999999,
+      "p95": 3226.5053772999995,
+      "p99": 3238.75459066
+    },
+    "inter_token_latency": {
+      "mean": 6.600307506653619,
+      "p50": 6.907644471624266,
+      "p95": 9.79115963082192,
+      "p99": 10.77098873399217
+    },
+    "request_latency": {
+      "mean": 5351.6939427,
+      "p50": 5252.3037365,
+      "p95": 7229.1164088,
+      "p99": 7283.359201759999
+    }
+  },
+  "benchmark_duration": 54.019561728000006,
+  "request_throughput": 0.37021904106117504,
+  "output_token_throughput": 189.55214902332162,
+  "artifacts": "/root/infer/outputs/perf_u13/performance/c2"
+}

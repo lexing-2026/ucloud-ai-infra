@@ -1,0 +1,3 @@
+nvdisasm warning : Disassembling Std Elf to Old format or Old Elf to Std format not supported yet, switching to Old format
+{"tile": [64, 128, 128], "warps": 4, "ms": 4.379, "TMACs": 156.9}
+PEAK_END

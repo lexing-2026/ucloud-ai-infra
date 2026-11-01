@@ -1,0 +1,5 @@
+执行：/root/.cache/ai-infra-eval/envs/evalscope-1.13.0/bin/python /root/infer/eval/runner.py _accuracy /root/infer/outputs/ifb_fh/accuracy/task_config.json
+
+评测状态：完整
+Markdown 报告：/root/infer/outputs/ifb_fh/report.md
+OFFICIAL_DONE

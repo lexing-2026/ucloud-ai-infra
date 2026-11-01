@@ -1,0 +1,96 @@
+agent_config: null
+analysis_report: false
+api_key: '**********'
+api_url: http://127.0.0.1:30000/v1
+chat_template: null
+collect_perf: true
+dataset_args: {}
+dataset_dir: /root/.cache/modelscope/hub/datasets
+dataset_hub: modelscope
+datasets:
+- ifbench
+debug: false
+enable_progress_tracker: false
+eval_backend: Native
+eval_batch_size: 2
+eval_config: null
+eval_type: openai_api
+evalscope_version: 1.13.0
+evaluation_identity:
+  benchmarks:
+    ifbench:
+      cache_source: null
+      evaluation_version: v1.2
+      fingerprint: sha256:f07892f8db7e7ee0fc48afaccba58bd0abdc29901458e48d4ec46a0153f8af13
+  schema_version: 1
+generation_config:
+  batch_size: 2
+  max_tokens: 32768
+ignore_errors: false
+judge:
+  aggregation: mean
+  contract:
+    prompt_template: null
+    score_mapping: null
+    score_type: pattern
+    system_prompt: null
+  min_valid_judges: 1
+  models: []
+  position_swap: auto
+  repeats: 1
+  strategy: auto
+limit: 100
+model: qwen3.8-27b-fp8
+model_args: {}
+model_id: qwen3.8-27b-fp8
+model_task: text_generation
+no_timestamp: true
+repeats: 1
+rerun_review: false
+resolved_benchmarks:
+  ifbench:
+    aggregation: weighted_mean
+    dataset_hub: modelscope
+    dataset_id: allenai/IFBench_test
+    dataset_revision: null
+    default_subset: default
+    eval_split: train
+    extra_params: {}
+    few_shot_num: 0
+    few_shot_prompt_template: null
+    few_shot_random: false
+    filters: null
+    max_image_bytes: null
+    metric_list:
+    - prompt_level_strict
+    - inst_level_strict
+    - prompt_level_loose
+    - inst_level_loose
+    name: ifbench
+    primary_metric:
+      aggregation: null
+      dimensions: {}
+      name: prompt_level_strict
+    prompt_template: null
+    query_template: null
+    sandbox_config: {}
+    shuffle: false
+    shuffle_choices: false
+    subset_list:
+    - default
+    system_prompt: null
+    train_split: null
+sandbox:
+  default_config: {}
+  enabled: false
+  engine: docker
+  manager_config: {}
+  pool_size: null
+sandbox_manager_config: {}
+sandbox_type: docker
+seed: 42
+stream: null
+timeout: null
+use_cache: null
+use_sandbox: false
+work_dir: /root/infer/outputs/ifb_fh/accuracy/native

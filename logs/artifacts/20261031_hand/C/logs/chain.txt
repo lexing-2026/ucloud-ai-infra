@@ -1,0 +1,105 @@
+{'role': 'assistant', 'content': '\n\n矩阵乘法是把前一个矩阵的每一行与后一个矩阵的每一列对应相乘再求和，从而得到新矩阵中相应元素的运算。', 'reasoning_content': '用户要求用一句话解释什么是矩阵乘法。需要简洁中文回答。先思考
+### fus8 draft=8 chunk=8192
+[2026-10-31 06:44:21] max_total_num_tokens=99863, chunked_prefill_size=8192, max_prefill_tokens=16384, max_run
+| 1 | 完整 | 20.0 | 0 | 0.21886 | 112.06 |
+| 2 | 完整 | 20.0 | 0 | 0.31583 | 161.71 |
+| 4 | 完整 | 20.0 | 0 | 0.40949 | 209.66 |
+| 8 | 完整 | 20.0 | 0 | 0.45646 | 233.71 |
+| 1 | TTFT（秒） | 1.652 | 1.655 | 1.660 | 1.660 |
+| 1 | TPOT（毫秒/token） | 5.705 | 5.397 | 6.331 | 11.290 |
+| 2 | TTFT（秒） | 1.860 | 1.702 | 3.270 | 3.286 |
+| 2 | TPOT（毫秒/token） | 8.671 | 8.806 | 10.079 | 13.187 |
+| 4 | TTFT（秒） | 3.073 | 3.300 | 6.533 | 6.548 |
+| 4 | TPOT（毫秒/token） | 13.058 | 12.612 | 19.191 | 19.414 |
+| 8 | TTFT（秒） | 7.031 | 5.759 | 11.793 | 17.063 |
+| 8 | TPOT（毫秒/token） | 19.358 | 19.700 | 32.950 | 32.981 |
+- 未发现完整性异常。
+      6 #running-req: 1	accept len: 8.00, accept rate: 1.00
+      5 #running-req: 2	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 4	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 2	accept len: 6.58, accept rate: 0.80
+{'role': 'assistant', 'content': '\n\n矩阵乘法是把前一个矩阵的每一行与后一个矩阵的每一列对应元素相乘后求和，从而得到新矩阵中相应元素的运算。', 'reasoning_content': '用户要求用一句话解释什么是矩阵乘法。需要简洁中文回答。先
+### fus10 draft=10 chunk=8192
+[2026-10-31 06:51:31] max_total_num_tokens=67031, chunked_prefill_size=8192, max_prefill_tokens=16384, max_run
+| 1 | 完整 | 20.0 | 0 | 0.24507 | 125.48 |
+| 2 | 完整 | 20.0 | 0 | 0.33503 | 171.54 |
+| 4 | 完整 | 20.0 | 0 | 0.40640 | 208.08 |
+| 8 | 完整 | 20.0 | 0 | 0.44164 | 226.12 |
+| 1 | TTFT（秒） | 1.658 | 1.658 | 1.663 | 1.664 |
+| 1 | TPOT（毫秒/token） | 4.738 | 4.505 | 6.269 | 6.384 |
+| 2 | TTFT（秒） | 1.863 | 1.705 | 3.271 | 3.287 |
+| 2 | TPOT（毫秒/token） | 7.938 | 8.007 | 9.417 | 9.599 |
+| 4 | TTFT（秒） | 2.594 | 1.715 | 6.530 | 6.546 |
+| 4 | TPOT（毫秒/token） | 13.612 | 14.834 | 17.461 | 27.806 |
+| 8 | TTFT（秒） | 6.288 | 4.975 | 11.692 | 15.499 |
+| 8 | TPOT（毫秒/token） | 21.962 | 20.820 | 44.765 | 45.592 |
+- 未发现完整性异常。
+      2 #running-req: 2	accept len: 8.22, accept rate: 0.80
+      2 #running-req: 2	accept len: 7.59, accept rate: 0.73
+      1 #running-req: 7	accept len: 9.60, accept rate: 0.96
+      1 #running-req: 7	accept len: 9.12, accept rate: 0.90
+{'role': 'assistant', 'content': '\n\n矩阵乘法是把前一个矩阵的每一行与后一个矩阵的每一列对应相乘再求和，从而得到新矩阵中相应元素的运算。', 'reasoning_content': '用户要求用一句话解释什么是矩阵乘法。需要简洁中文回答。先思考
+### fuc4k draft=8 chunk=4096
+[2026-10-31 06:58:25] max_total_num_tokens=99863, chunked_prefill_size=4096, max_prefill_tokens=16384, max_run
+| 1 | 完整 | 20.0 | 0 | 0.22652 | 115.98 |
+| 2 | 完整 | 20.0 | 0 | 0.30843 | 157.92 |
+| 4 | 完整 | 20.0 | 0 | 0.38168 | 195.42 |
+| 8 | 完整 | 20.0 | 0 | 0.44669 | 228.70 |
+| 1 | TTFT（秒） | 1.705 | 1.708 | 1.709 | 1.710 |
+| 1 | TPOT（毫秒/token） | 5.299 | 5.323 | 5.549 | 5.551 |
+| 2 | TTFT（秒） | 1.871 | 1.752 | 2.553 | 3.221 |
+| 2 | TPOT（毫秒/token） | 8.863 | 8.935 | 9.338 | 11.265 |
+| 4 | TTFT（秒） | 2.745 | 2.140 | 5.916 | 6.585 |
+| 4 | TPOT（毫秒/token） | 14.720 | 13.608 | 26.183 | 36.094 |
+| 8 | TTFT（秒） | 6.383 | 5.500 | 12.046 | 16.052 |
+| 8 | TPOT（毫秒/token） | 21.222 | 20.338 | 32.799 | 43.139 |
+- 未发现完整性异常。
+      2 #running-req: 2	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 2	accept len: 7.41, accept rate: 0.92
+      2 #running-req: 1	accept len: 8.00, accept rate: 1.00
+      1 #running-req: 7	accept len: 6.90, accept rate: 0.84
+CHAIN_END
+{'role': 'assistant', 'content': '\n\n矩阵乘法是把前一个矩阵的每一行与后一个矩阵的每一列对应元素相乘后求和，从而得到新矩阵中相应元素的运算。', 'reasoning_content': '用户要求用一句话解释什么是矩阵乘法。需要简洁中文回答。先
+### fd10m93 draft=10 chunk=8192 mem=0.93
+[2026-10-31 07:05:58] max_total_num_tokens=72891, chunked_prefill_size=8192, max_prefill_tokens=16384, max_run
+| 1 | 异常 | — | — | — | — |
+| 2 | 异常 | — | — | — | — |
+| 4 | 异常 | — | — | — | — |
+| 8 | 异常 | — | — | — | — |
+| 1 | TTFT（秒） | — | — | — | — |
+| 1 | TPOT（毫秒/token） | — | — | — | — |
+| 2 | TTFT（秒） | — | — | — | — |
+| 2 | TPOT（毫秒/token） | — | — | — | — |
+| 4 | TTFT（秒） | — | — | — | — |
+| 4 | TPOT（毫秒/token） | — | — | — | — |
+| 8 | TTFT（秒） | — | — | — | — |
+| 8 | TPOT（毫秒/token） | — | — | — | — |
+- 并发 1：结果解析失败：[Errno 2] No such file or directory: '/root/infer/outputs/perf_fd10m93/performance/c1/profile_export_aiperf.json'
+{'role': 'assistant', 'content': '\n\n矩阵乘法是把前一个矩阵的每一行与后一个矩阵的每一列对应元素相乘再求和，从而得到新矩阵中相应元素的运算。', 'reasoning_content': '用户要求用一句话解释什么是矩阵乘法。需要简洁中文回答。先
+### fd12m955 draft=12 chunk=8192 mem=0.955
+[2026-10-31 07:07:21] max_total_num_tokens=69361, chunked_prefill_size=8192, max_prefill_tokens=16384, max_run
+- 性能阶段：API 请求失败：Remote end closed connection without response
+CHAIN2_END
+{'role': 'assistant', 'content': '\n\n矩阵乘法是把前一个矩阵的每一行与后一个矩阵的每一列对应元素相乘后求和，从而得到新矩阵中相应元素的运算。', 'reasoning_content': '用户要求用一句话解释什么是矩阵乘法。需要简洁中文回答。先
+### fd10m9275 draft=10 chunk=8192 mem=0.9275
+[2026-10-31 07:10:07] max_total_num_tokens=69961, chunked_prefill_size=8192, max_prefill_tokens=16384, max_run
+| 1 | 完整 | 20.0 | 0 | 0.24462 | 125.25 |
+| 2 | 完整 | 20.0 | 0 | 0.33482 | 171.43 |
+| 4 | 完整 | 20.0 | 0 | 0.40622 | 207.98 |
+| 8 | 完整 | 20.0 | 0 | 0.45343 | 232.15 |
+| 1 | TTFT（秒） | 1.660 | 1.661 | 1.667 | 1.669 |
+| 1 | TPOT（毫秒/token） | 4.746 | 4.514 | 6.275 | 6.393 |
+| 2 | TTFT（秒） | 1.862 | 1.704 | 3.272 | 3.287 |
+| 2 | TPOT（毫秒/token） | 7.947 | 8.011 | 9.423 | 9.606 |
+| 4 | TTFT（秒） | 2.594 | 1.715 | 6.531 | 6.546 |
+| 4 | TPOT（毫秒/token） | 13.619 | 14.843 | 17.475 | 27.819 |
+| 8 | TTFT（秒） | 6.183 | 4.934 | 11.694 | 15.503 |
+| 8 | TPOT（毫秒/token） | 21.312 | 20.720 | 37.134 | 44.057 |
+- 未发现完整性异常。
+      2 #running-req: 2	accept len: 8.22, accept rate: 0.80
+      2 #running-req: 2	accept len: 7.59, accept rate: 0.73
+      1 #running-req: 7	accept len: 9.60, accept rate: 0.96
+      1 #running-req: 7	accept len: 9.12, accept rate: 0.90
+CHAIN3_END
+d12m9375 SERVER_DIED ValueError: --language-model-only does not support ['Qwen3_5ForConditionalGeneration']. Supported: ['DeepseekV4ForCausalLM', 'MuseGlimmerForConditionalGeneration', 'Cosmo
+CHAIN4_END

@@ -1,0 +1,4 @@
+14443, 45896 MiB
+7] max_total_num_tokens=85600, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=8, context_len=65536, available_gpu_mem=2.57 G
+48058 MiB
+1

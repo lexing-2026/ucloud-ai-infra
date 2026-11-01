@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 8,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 6770.766438600001,
+      "p50": 6440.295099499999,
+      "p95": 11538.409081550004,
+      "p99": 16138.314303509993
+    },
+    "inter_token_latency": {
+      "mean": 17.96379679598826,
+      "p50": 16.647432648727985,
+      "p95": 28.2807551667319,
+      "p99": 30.804411053698622
+    },
+    "request_latency": {
+      "mean": 15950.266601349998,
+      "p50": 17414.933688999998,
+      "p95": 23006.14514155,
+      "p99": 27230.56034030999
+    }
+  },
+  "benchmark_duration": 41.226346752000005,
+  "request_throughput": 0.4850808224165807,
+  "output_token_throughput": 248.3613810772893,
+  "artifacts": "/root/infer/outputs/perf_t10q/performance/c8"
+}

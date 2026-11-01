@@ -1,0 +1,17 @@
+/root/infer/sg22/lib/python3.12/site-packages/triton/language/core.py:2625: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+  warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+{"lens": [8192], "o_rel": 2.4190900148823857e-05, "o_max": 6.103515625e-05, "o_abs": 0.030029296875, "nan": 0, "conv": true, "state_rel": 2.220725491497433e-06, "snap": 0.00048828125}
+{"lens": [8192], "o_rel": 1.7384047168889083e-05, "o_max": 6.103515625e-05, "o_abs": 0.0283203125, "nan": 0, "conv": true, "state_rel": 1.2813517287213472e-06, "snap": 0.00048828125}
+{"lens": [1], "o_rel": 0.0, "o_max": 0.0, "o_abs": 0.01544189453125, "nan": 0, "conv": true, "state_rel": 0.0, "snap": 0.0}
+{"lens": [64], "o_rel": 0.0, "o_max": 0.0, "o_abs": 0.018798828125, "nan": 0, "conv": true, "state_rel": 0.0, "snap": 0.0}
+{"lens": [65], "o_rel": 5.344763565062749e-08, "o_max": 7.62939453125e-06, "o_abs": 0.0184326171875, "nan": 0, "conv": true, "state_rel": 0.0, "snap": 0.0}
+{"lens": [9], "o_rel": 0.0, "o_max": 0.0, "o_abs": 0.021484375, "nan": 0, "conv": true, "state_rel": 0.0, "snap": 0.0}
+{"lens": [100, 28], "o_rel": 2.99849347129566e-07, "o_max": 3.0517578125e-05, "o_abs": 0.019287109375, "nan": 0, "conv": true, "state_rel": 0.0, "snap": 0.0}
+{"lens": [1000, 7192], "o_rel": 1.8967724827234633e-05, "o_max": 0.0001220703125, "o_abs": 0.0308837890625, "nan": 0, "conv": true, "state_rel": 4.443044417712372e-06, "snap": 0.00048828125}
+{"lens": [1, 1, 75, 64, 129], "o_rel": 0.0, "o_max": 0.0, "o_abs": 0.0211181640625, "nan": 0, "conv": true, "state_rel": 0.0, "snap": 0.0}
+{"lens": [2048, 2048, 2048, 2048], "o_rel": 1.1041472134820651e-05, "o_max": 6.103515625e-05, "o_abs": 0.0262451171875, "nan": 0, "conv": true, "state_rel": 1.2654509191634133e-06, "snap": 0.00048828125}
+CHECK_END 0
+{"round": 0, "stock": 3.071, "fused": 2.184}
+{"round": 1, "stock": 3.069, "fused": 2.162}
+{"round": 2, "stock": 3.07, "fused": 2.165}
+PREFILL_END 0

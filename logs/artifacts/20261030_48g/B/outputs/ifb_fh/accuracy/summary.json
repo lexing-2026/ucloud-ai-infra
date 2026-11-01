@@ -1,0 +1,38 @@
+{
+  "status": "完整",
+  "issues": [],
+  "metrics": {
+    "prompt_level_strict": {
+      "score": 0.79,
+      "num": 100
+    },
+    "inst_level_strict": {
+      "score": 0.8108,
+      "num": 111
+    },
+    "prompt_level_loose": {
+      "score": 0.86,
+      "num": 100
+    },
+    "inst_level_loose": {
+      "score": 0.8739,
+      "num": 111
+    }
+  },
+  "generated_samples": 100,
+  "execution_summary": {
+    "requested": 100,
+    "succeeded": 100,
+    "errored": 0,
+    "incomplete": false,
+    "subsets": {
+      "default": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0
+      }
+    }
+  },
+  "native_report": "/root/infer/outputs/ifb_fh/accuracy/native/reports/qwen3.8-27b-fp8/ifbench.json",
+  "artifacts": "/root/infer/outputs/ifb_fh/accuracy"
+}

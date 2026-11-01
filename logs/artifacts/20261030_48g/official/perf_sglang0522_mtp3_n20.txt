@@ -1,0 +1,293 @@
+# AI Infras 比赛评测报告
+
+- 模型：`qwen3.8-27b-fp8`
+- API：`http://127.0.0.1:30000/v1`
+- 开始：2026-10-30T11:09:22.936188+00:00
+- 结束：2026-10-30T11:22:04.118532+00:00
+- 总体状态：**完整**
+
+## 性能测试
+
+ISL/OSL=8192/512（服务端口径）；并发 1/2/4/8；每档预热 8 请求，不计入正式统计。
+延迟包含评测机到 API 的网络开销，不设置 TTFT/TPOT 达标门槛。
+
+| 并发 | 状态 | 成功请求 | 错误请求 | 请求/s | 输出 token/s |
+|---:|---|---:|---:|---:|---:|
+| 1 | 完整 | 20.0 | 0 | 0.09077 | 46.48 |
+| 2 | 完整 | 20.0 | 0 | 0.14607 | 74.79 |
+| 4 | 完整 | 20.0 | 0 | 0.21357 | 109.35 |
+| 8 | 完整 | 20.0 | 0 | 0.26834 | 137.39 |
+
+| 并发 | 服务端实际输入 token 均值 | 最小 | 最大 |
+|---:|---:|---:|---:|
+| 1 | 8192.0 | 8192 | 8192 |
+| 2 | 8192.0 | 8192 | 8192 |
+| 4 | 8192.0 | 8192 | 8192 |
+| 8 | 8192.0 | 8192 | 8192 |
+
+| 并发 | 指标 | 平均 | P50 | P95 | P99 |
+|---:|---|---:|---:|---:|---:|
+| 1 | TTFT（秒） | 2.109 | 2.107 | 2.167 | 2.170 |
+| 1 | TPOT（毫秒/token） | 17.418 | 16.040 | 22.128 | 22.572 |
+| 1 | 端到端（秒） | 11.009 | 10.302 | 13.418 | 13.646 |
+| 2 | TTFT（秒） | 2.298 | 2.175 | 2.603 | 3.855 |
+| 2 | TPOT（毫秒/token） | 21.872 | 20.777 | 28.361 | 31.112 |
+| 2 | 端到端（秒） | 13.474 | 12.818 | 17.832 | 18.306 |
+| 4 | TTFT（秒） | 2.852 | 2.188 | 6.697 | 7.954 |
+| 4 | TPOT（毫秒/token） | 29.372 | 28.494 | 40.170 | 42.227 |
+| 4 | 端到端（秒） | 17.861 | 16.938 | 22.831 | 25.676 |
+| 8 | TTFT（秒） | 5.793 | 3.797 | 16.611 | 16.670 |
+| 8 | TPOT（毫秒/token） | 42.952 | 41.638 | 62.223 | 68.052 |
+| 8 | 端到端（秒） | 27.742 | 26.760 | 38.057 | 43.002 |
+
+TPOT 为每请求 `(端到端延迟 − TTFT)/(输出 token 数 − 1)` 后取百分位；不使用逐块间隔的 P95。
+使用相同确定性输入及顺序，每轮请求传独立 cache_salt 避免跨档缓存复用；未通过服务器遥测独立验证缓存命中。
+
+## IFBench 精度
+
+EvalScope 原生评测，limit=100，eval_batch_size=2；生成参数仅覆盖 `max_tokens=32768`，其余沿用工具默认值。
+本次未执行精度阶段。
+
+## 异常与证据
+
+- 未发现完整性异常。
+
+- [结构化汇总](summary.json)
+- [环境与依赖版本](environment.json)
+- [评测输入配置](configuration.json)
+- 性能原生结果：`performance/c{1,2,4,8}/`；完整输入及其摘要：`performance/dataset.*`。
+- 精度原生结果：`accuracy/native/`；输入配置及解析后的默认配置：`accuracy/task_config.json`、`accuracy/resolved_config.json`。
+
+工具固定为 AIPerf 0.13.0、EvalScope 1.13.0。结果仅适用于本次模型、API 路径、样本和网络环境。
+{
+  "started_at": "2026-10-30T11:09:22.936188+00:00",
+  "configuration": {
+    "mode": "perf",
+    "base_url": "http://127.0.0.1:30000/v1",
+    "model": "qwen3.8-27b-fp8",
+    "tokenizer": "/model/ModelScope/Qwen/Qwen3.8-27B-FP8",
+    "tokenizer_revision": null,
+    "api_key_env": "OPENAI_API_KEY",
+    "output_dir": "/root/infer/outputs/perf_sg22_mtp3_n20",
+    "env_dir": "/root/.cache/ai-infra-eval/envs",
+    "perf_requests": 20,
+    "eval_batch_size": 2,
+    "request_timeout": 600,
+    "seed": 42,
+    "dry_run": false,
+    "isl": 8192,
+    "osl": 512,
+    "concurrencies": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "warmup_requests": 8,
+    "accuracy_limit": 100,
+    "accuracy_generation_config": {
+      "max_tokens": 32768
+    }
+  },
+  "status": "完整",
+  "issues": [],
+  "performance": [
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 1,
+      "expected_requests": 20,
+      "records": 20,
+      "valid_records": 20,
+      "successful_requests": 20.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "model",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2108.5107448999997,
+          "p50": 2106.988929,
+          "p95": 2166.9579318,
+          "p99": 2169.75728236
+        },
+        "inter_token_latency": {
+          "mean": 17.418481140410957,
+          "p50": 16.03978983659491,
+          "p95": 22.128165985322898,
+          "p99": 22.57186331056751
+        },
+        "request_latency": {
+          "mean": 11009.35460765,
+          "p50": 10301.635178,
+          "p95": 13418.2621888,
+          "p99": 13645.699451359998
+        }
+      },
+      "benchmark_duration": 220.326369024,
+      "request_throughput": 0.09077262195588268,
+      "output_token_throughput": 46.47558244141193,
+      "artifacts": "/root/infer/outputs/perf_sg22_mtp3_n20/performance/c1"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 2,
+      "expected_requests": 20,
+      "records": 20,
+      "valid_records": 20,
+      "successful_requests": 20.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "model",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2297.76710765,
+          "p50": 2175.4984459999996,
+          "p95": 2602.656054800001,
+          "p99": 3854.796924559998
+        },
+        "inter_token_latency": {
+          "mean": 21.871901247260276,
+          "p50": 20.776908285714285,
+          "p95": 28.360880818591,
+          "p99": 31.112297464696667
+        },
+        "request_latency": {
+          "mean": 13474.308645000001,
+          "p50": 12818.359456,
+          "p95": 17832.09631155,
+          "p99": 18306.472086309997
+        }
+      },
+      "benchmark_duration": 136.917997568,
+      "request_throughput": 0.14606683288543387,
+      "output_token_throughput": 74.78621843734214,
+      "artifacts": "/root/infer/outputs/perf_sg22_mtp3_n20/performance/c2"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 4,
+      "expected_requests": 20,
+      "records": 20,
+      "valid_records": 20,
+      "successful_requests": 20.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "model",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2851.8257399999998,
+          "p50": 2188.223692,
+          "p95": 6697.0628049000015,
+          "p99": 7953.783208179997
+        },
+        "inter_token_latency": {
+          "mean": 29.37200306702544,
+          "p50": 28.49383928473581,
+          "p95": 40.170445198043055,
+          "p99": 42.226829407514664
+        },
+        "request_latency": {
+          "mean": 17860.91930725,
+          "p50": 16937.5378,
+          "p95": 22831.3273522,
+          "p99": 25676.456940839995
+        }
+      },
+      "benchmark_duration": 93.638985472,
+      "request_throughput": 0.21357151325800253,
+      "output_token_throughput": 109.3486147880973,
+      "artifacts": "/root/infer/outputs/perf_sg22_mtp3_n20/performance/c4"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 8,
+      "expected_requests": 20,
+      "records": 20,
+      "valid_records": 20,
+      "successful_requests": 20.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "model",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 5793.0624444000005,
+          "p50": 3796.5727044999994,
+          "p95": 16610.739236999998,
+          "p99": 16669.9375978
+        },
+        "inter_token_latency": {
+          "mean": 42.95198342407045,
+          "p50": 41.63801454305283,
+          "p95": 62.22252195587084,
+          "p99": 68.05226232776907
+        },
+        "request_latency": {
+          "mean": 27741.525974099997,
+          "p50": 26759.697340499995,
+          "p95": 38056.57896015,
+          "p99": 43002.25412562999
+        }
+      },
+      "benchmark_duration": 74.52753766400001,
+      "request_throughput": 0.26833810795374485,
+      "output_token_throughput": 137.38911127231736,
+      "artifacts": "/root/infer/outputs/perf_sg22_mtp3_n20/performance/c8"
+    }
+  ],
+  "ended_at": "2026-10-30T11:22:04.118532+00:00"
+}
+{
+  "mode": "perf",
+  "base_url": "http://127.0.0.1:30000/v1",
+  "model": "qwen3.8-27b-fp8",
+  "tokenizer": "/model/ModelScope/Qwen/Qwen3.8-27B-FP8",
+  "tokenizer_revision": null,
+  "api_key_env": "OPENAI_API_KEY",
+  "output_dir": "/root/infer/outputs/perf_sg22_mtp3_n20",
+  "env_dir": "/root/.cache/ai-infra-eval/envs",
+  "perf_requests": 20,
+  "eval_batch_size": 2,
+  "request_timeout": 600,
+  "seed": 42,
+  "dry_run": false,
+  "isl": 8192,
+  "osl": 512,
+  "concurrencies": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "warmup_requests": 8,
+  "accuracy_limit": 100,
+  "accuracy_generation_config": {
+    "max_tokens": 32768
+  }
+}

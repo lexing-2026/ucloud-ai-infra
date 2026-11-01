@@ -1,0 +1,13 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Using CPython 3.12.11 interpreter at: /usr/local/miniconda3/envs/py312/bin/python
+Creating virtual environment at: /root/.cache/ai-infra-eval/envs/aiperf-0.13.0
+Activate with: source /root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/activate
+Using CPython 3.12.11 interpreter at: /usr/local/miniconda3/envs/py312/bin/python
+Creating virtual environment at: /root/.cache/ai-infra-eval/envs/evalscope-1.13.0
+Activate with: source /root/.cache/ai-infra-eval/envs/evalscope-1.13.0/bin/activate
+aiperf-ok
+evalscope-ok
+[nltk_data] Downloading package punkt_tab to /root/.cache/ai-infra-
+[nltk_data]     eval/envs/nltk_data...
+/root/.cache/ai-infra-eval/envs: aiperf-0.13.0 evalscope-1.13.0 nltk_data  /root/.cache/ai-infra-eval/envs/nltk_data: tokenizers 
+HARNESS_DONE

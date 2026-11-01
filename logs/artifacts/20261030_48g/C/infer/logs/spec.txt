@@ -1,0 +1,24 @@
+[2026-10-30 15:24:33] max_total_num_tokens=106968, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=8, context_len=65536, ava
+### df4 spec=dflash draft=4 mem=0.90
+| 1 | 完整 | 20.0 | 0 | 0.13731 | 70.30 |
+| 2 | 完整 | 20.0 | 0 | 0.21645 | 110.82 |
+| 4 | 完整 | 20.0 | 0 | 0.29814 | 152.65 |
+| 8 | 完整 | 20.0 | 0 | 0.35524 | 181.88 |
+| 1 | TTFT（秒） | 1.838 | 1.840 | 1.844 | 1.845 |
+| 1 | TPOT（毫秒/token） | 10.649 | 10.628 | 11.020 | 11.024 |
+| 2 | TTFT（秒） | 2.594 | 1.892 | 3.667 | 3.668 |
+| 2 | TPOT（毫秒/token） | 12.975 | 14.225 | 14.522 | 14.786 |
+| 4 | TTFT（秒） | 3.778 | 3.690 | 7.266 | 7.281 |
+| 4 | TPOT（毫秒/token） | 18.613 | 18.547 | 27.912 | 29.479 |
+| 8 | TTFT（秒） | 8.085 | 6.428 | 13.260 | 21.017 |
+| 8 | TPOT（毫秒/token） | 26.642 | 27.025 | 45.777 | 53.022 |
+- 未发现完整性异常。
+     11 #running-req: 2	accept len: 4.00, accept rate: 1.00
+      9 #running-req: 4	accept len: 4.00, accept rate: 1.00
+      2 #running-req: 7	accept len: 4.00, accept rate: 1.00
+      2 #running-req: 7	accept len: 3.99, accept rate: 1.00
+SP_END
+[2026-10-30 17:01:38] max_total_num_tokens=4941, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=8, context_len=65536, avail
+### df12m925 spec=dflash draft=12 mem=0.925
+- 性能阶段：流式 API 返回错误：{'object': 'error', 'message': 'Input length (8192 tokens) exceeds the maximum allowed length (4935 tokens). Use a shorter input or enable --allow-auto-trunc
+SP_END

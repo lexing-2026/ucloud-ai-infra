@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 4,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 2593.5858055999997,
+      "p50": 1715.2628019999997,
+      "p95": 6530.5329996499995,
+      "p99": 6546.1513895299995
+    },
+    "inter_token_latency": {
+      "mean": 13.619268470939335,
+      "p50": 14.842791674168298,
+      "p95": 17.47487518786694,
+      "p99": 27.81938430254401
+    },
+    "request_latency": {
+      "mean": 9553.03199425,
+      "p50": 9365.077508,
+      "p95": 12252.023640650004,
+      "p99": 17497.38444572999
+    }
+  },
+  "benchmark_duration": 49.232476160000004,
+  "request_throughput": 0.4062152203580631,
+  "output_token_throughput": 207.98219282332832,
+  "artifacts": "/root/infer/outputs/perf_fd10m9275/performance/c4"
+}

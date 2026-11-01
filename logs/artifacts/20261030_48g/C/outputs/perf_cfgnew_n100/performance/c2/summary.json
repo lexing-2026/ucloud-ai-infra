@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 2,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 1902.52818637,
+      "p50": 1867.69911,
+      "p95": 1869.9799947,
+      "p99": 3581.73455589
+    },
+    "inter_token_latency": {
+      "mean": 9.766799960665361,
+      "p50": 9.551034908023482,
+      "p95": 11.400732750587075,
+      "p99": 18.6199259837182
+    },
+    "request_latency": {
+      "mean": 6893.36296627,
+      "p50": 6748.337826999999,
+      "p95": 8974.66831695,
+      "p99": 11381.974776480001
+    }
+  },
+  "benchmark_duration": 345.689066496,
+  "request_throughput": 0.28927446815689517,
+  "output_token_throughput": 148.10852769633033,
+  "artifacts": "/root/infer/outputs/perf_cfgnew_n100/performance/c2"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 8,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 6288.2626568,
+      "p50": 4974.952963,
+      "p95": 11691.738109500004,
+      "p99": 15499.071296299993
+    },
+    "inter_token_latency": {
+      "mean": 21.961702230821917,
+      "p50": 20.819649481409,
+      "p95": 44.76506518365949,
+      "p99": 45.592292667260274
+    },
+    "request_latency": {
+      "mean": 17510.69249675,
+      "p50": 16274.319377999998,
+      "p95": 28225.043836450004,
+      "p99": 34189.774232889984
+    }
+  },
+  "benchmark_duration": 45.283244288000006,
+  "request_throughput": 0.4416407508409033,
+  "output_token_throughput": 226.1200644305425,
+  "artifacts": "/root/infer/outputs/perf_fus10/performance/c8"
+}

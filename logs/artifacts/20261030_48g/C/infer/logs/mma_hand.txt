@@ -1,0 +1,7 @@
+{"variant": "reg", "nacc": 16, "inner": 4, "threads": 128, "ms": 0.029, "TMACs": 23558.3}
+{"variant": "reg", "nacc": 16, "inner": 4, "threads": 256, "ms": 0.023, "TMACs": 29583.7}
+{"variant": "reg", "nacc": 4, "inner": 16, "threads": 128, "ms": 0.028, "TMACs": 24172.2}
+{"variant": "reg", "nacc": 1, "inner": 64, "threads": 128, "ms": 0.028, "TMACs": 24881.2}
+{"variant": "reg", "nacc": 16, "inner": 4, "threads": 64, "ms": 0.036, "TMACs": 19120.6}
+{"variant": "reg", "nacc": 16, "inner": 4, "threads": 32, "ms": 0.053, "TMACs": 12958.8}
+HAND_END

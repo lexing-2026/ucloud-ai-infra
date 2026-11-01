@@ -1,0 +1,12 @@
+== submission ifb_g13
+as returned 83 / 100
+leading newlines removed 89 / 100
+gain [(80, ['format:line_indent', 'ratio:sentence_words']), (96, ['format:no_bullets_bullets']), (97, ['format:no_bullets_bullets']), (98, ['format:no_bullets_bullets']), (95, ['format:no_bullets_bullets']), (99, ['format:no_bullets_bullets'])]
+lose []
+first two chars [("'\\n\\n'", 99), ("''", 1)]
+== vllm mtp3 out_full_mtp3_b8
+as returned 78 / 100
+leading newlines removed 85 / 100
+gain [(75, ['format:line_indent']), (80, ['format:line_indent', 'ratio:sentence_words']), (95, ['format:no_bullets_bullets']), (96, ['format:no_bullets_bullets']), (98, ['format:no_bullets_bullets']), (97, ['format:no_bullets_bullets']), (99, ['format:no_bullets_bullets'])]
+lose []
+first two chars [("'\\n\\n'", 99), ("''", 1)]

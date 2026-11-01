@@ -1,0 +1,28 @@
+replay vs snapshot
+  0 63 3000 common tokens 24 diff steps 483 832
+  1 660 3000 common tokens 74 diff steps 769 837
+  2 2956 3000 common tokens 22 diff steps 584 455
+  3 11531 3000 common tokens 1 diff steps 245 242
+  4 27902 1500 common tokens 1500 same steps 137 146
+  5 115 3000 common tokens 51 diff steps 743 259
+  6 420 3000 common tokens 2 diff steps 829 598
+  7 6006 3000 common tokens 49 diff steps 335 251
+replay vs replay after restart
+  0 63 3000 common tokens 3000 same steps 483 483
+  1 660 3000 common tokens 3000 same steps 769 769
+  2 2956 3000 common tokens 3000 same steps 584 584
+  3 11531 3000 common tokens 3000 same steps 245 245
+  4 27902 1500 common tokens 1500 same steps 137 137
+  5 115 3000 common tokens 3000 same steps 743 743
+  6 420 3000 common tokens 3000 same steps 829 829
+  7 6006 3000 common tokens 3000 same steps 335 335
+replay first token agrees 75 / 76 round(0.987) cached_or_unflushed 0
+  depth 0 400 24 / 24
+  depth 400 1600 23 / 24
+  depth 1600 3000 28 / 28
+  all 4 tokens agree 73 / 76
+snapshot first token agrees 75 / 76 round(0.987) cached_or_unflushed 0
+  depth 0 400 24 / 24
+  depth 400 1600 24 / 24
+  depth 1600 3000 27 / 28
+  all 4 tokens agree 73 / 76

@@ -1,0 +1,5 @@
+6] max_total_num_tokens=123308, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=8, context_len=65536, ava
+b7 profiler rc=0 table=158
+2] max_total_num_tokens=74060, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=8, context_len=65536, avai
+b10 profiler rc=0 table=158
+SPS_END

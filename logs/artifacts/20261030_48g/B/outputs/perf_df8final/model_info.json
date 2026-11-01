@@ -1,0 +1,9 @@
+{
+  "id": "qwen3.8-27b-fp8",
+  "object": "model",
+  "created": 1793380211,
+  "owned_by": "sglang",
+  "root": "qwen3.8-27b-fp8",
+  "parent": null,
+  "max_model_len": 65536
+}

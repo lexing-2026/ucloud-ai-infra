@@ -1,0 +1,21 @@
+--context-length 65536 
+--mem-fraction-static 0.925 
+--kv-cache-dtype fp8_e4m3 
+--attention-backend flashinfer 
+--chunked-prefill-size 8192 
+--max-running-requests 8 
+--mamba-ssm-dtype bfloat16 
+--mamba-radix-cache-strategy extra_buffer 
+--max-mamba-cache-size 40 
+--cuda-graph-backend-prefill disabled 
+--speculative-algorithm DFLASH 
+--speculative-draft-model-path /model/ModelScope/incoai/Qwen3.8-27B-DFlash2 
+--speculative-num-draft-tokens 8 
+--speculative-draft-kv-cache-dtype fp8_e4m3 
+--speculative-draft-window-size 2048 
+[2026-10-30 21:27:03] Quantized lm_head to block FP8: (248320, 5120)
+[2026-10-30 21:27:15] max_total_num_tokens=99863, chunked_prefill_size=8192, max_prefill_tokens=16384, max_run
+0
+投机解码是一种通过让小型“草稿模型”快速生成多个候选 token，再由大型“目标模型”并行验证并修正，从而在保持输出质量不变的前提下显著加速大语言模型推理速度的技术。
+{'prompt_tokens': 19, 'total_tokens': 64, 'completion_tokens': 45, 'prompt_tokens_details': None, 'reasoning_tokens': 0}
+VERIFY_END

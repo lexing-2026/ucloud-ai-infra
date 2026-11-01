@@ -1,0 +1,6 @@
+installed /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=14336,K=5120,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+installed /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=16384,K=5120,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+installed /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=34816,K=5120,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+installed /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=5120,K=17408,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+installed /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=5120,K=6144,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+already patched: /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/fp8_kernel.py

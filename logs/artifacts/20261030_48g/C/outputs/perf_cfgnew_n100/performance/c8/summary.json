@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 8,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 5367.2696626,
+      "p50": 4542.119667499999,
+      "p95": 9060.31159225,
+      "p99": 12657.825985820038
+    },
+    "inter_token_latency": {
+      "mean": 26.936457947123287,
+      "p50": 28.24982685225049,
+      "p95": 35.949095184050876,
+      "p99": 52.955777677221334
+    },
+    "request_latency": {
+      "mean": 19131.799673579997,
+      "p50": 18832.51988,
+      "p95": 24132.5817775,
+      "p99": 34851.45029195008
+    }
+  },
+  "benchmark_duration": 241.260126976,
+  "request_throughput": 0.41448491456331243,
+  "output_token_throughput": 212.21627625641597,
+  "artifacts": "/root/infer/outputs/perf_cfgnew_n100/performance/c8"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 2,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 1747.2204824799999,
+      "p50": 1676.4216299999998,
+      "p95": 2387.0522598499992,
+      "p99": 3224.67712086
+    },
+    "inter_token_latency": {
+      "mean": 10.065460854637964,
+      "p50": 9.310946788649705,
+      "p95": 17.695900929354206,
+      "p99": 21.42497039266147
+    },
+    "request_latency": {
+      "mean": 6890.6709792,
+      "p50": 6455.217790499999,
+      "p95": 10720.15184665,
+      "p99": 12623.25086803001
+    }
+  },
+  "benchmark_duration": 345.02140006400003,
+  "request_throughput": 0.2898349388839949,
+  "output_token_throughput": 148.3954887086054,
+  "artifacts": "/root/infer/outputs/perf_ds7full/performance/c2"
+}

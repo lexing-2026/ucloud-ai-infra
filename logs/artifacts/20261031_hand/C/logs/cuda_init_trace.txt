@@ -1,0 +1,129 @@
+--- pid 52162 argv ['/root/infer/sg22/lib/python3.12/site-packages/sglang/launch_server.py', '--model-path']
+  File "/root/infer/trace_init.py", line 13, in <module>
+    runpy.run_module("sglang.launch_server", run_name="__main__", alter_sys=True)
+  File "<frozen runpy>", line 226, in run_module
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/launch_server.py", line 84, in <module>
+    run_server(server_args)
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/launch_server.py", line 29, in run_server
+    server_args.resolve_once()
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/server_args.py", line 258, in resolve_once
+    from sglang.srt.arg_groups.pipeline import run_resolution_pipeline
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/arg_groups/pipeline.py", line 9, in <module>
+    from sglang.srt.arg_groups.kv_shard_hook import handle_kv_cache_sharding
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/arg_groups/kv_shard_hook.py", line 17, in <module>
+    from sglang.srt.configs.model_config import is_deepseek_dsa
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/configs/model_config.py", line 34, in <module>
+    from sglang.srt.layers.quantization import QUANTIZATION_METHODS
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/layers/quantization/__init__.py", line 8, in <module>
+    from sglang.srt.layers.quantization.auto_round import AutoRoundConfig
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/layers/quantization/auto_round.py", line 12, in <module>
+    from sglang.srt.layers.quantization.utils import get_scalar_types
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/layers/quantization/utils.py", line 45, in <module>
+    ScalarType, scalar_types = get_scalar_types()
+  File "/root/infer/sg22/lib/python3.12/site-packages/sglang/srt/layers/quantization/utils.py", line 27, in get_scalar_types
+    from sgl_kernel.scalar_type import ScalarType, scalar_types
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sgl_kernel/__init__.py", line 31, in <module>
+    from sgl_kernel.elementwise import (
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/sgl_kernel/elementwise.py", line 7, in <module>
+    import flashinfer.norm as _flashinfer_norm
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/__init__.py", line 25, in <module>
+    from . import jit as jit
+  File "<frozen importlib._bootstrap>", line 1415, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/jit/__init__.py", line 22, in <module>
+    from . import cubin_loader
+  File "<frozen importlib._bootstrap>", line 1415, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/jit/cubin_loader.py", line 30, in <module>
+    from .core import logger
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/jit/core.py", line 26, in <module>
+    from . import env as jit_env
+  File "<frozen importlib._bootstrap>", line 1415, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/jit/env.py", line 368, in <module>
+    FLASHINFER_WORKSPACE_DIR: pathlib.Path = _get_workspace_dir_name()
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/jit/env.py", line 356, in _get_workspace_dir_name
+    compilation_context = CompilationContext()
+  File "/root/infer/sg22/lib/python3.12/site-packages/flashinfer/compilation_context.py", line 129, in __init__
+    major, minor = torch.cuda.get_device_capability(device)
+  File "/root/infer/sg22/lib/python3.12/site-packages/torch/cuda/__init__.py", line 782, in get_device_capability
+    prop = get_device_properties(device)
+  File "/root/infer/sg22/lib/python3.12/site-packages/torch/cuda/__init__.py", line 799, in get_device_properties
+    _lazy_init()  # will define _get_device_properties
+  File "/root/infer/sg22/lib/python3.12/site-packages/torch/cuda/__init__.py", line 591, in _lazy_init
+    torch._C._cuda_init()
+  File "/root/infer/trace_init.py", line 9, in init
+    traceback.print_stack(file=f)

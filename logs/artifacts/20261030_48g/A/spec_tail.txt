@@ -1,0 +1,130 @@
+      1 #running-req: 5	accept len: 7.54, accept rate: 0.94
+SP_END
+[2026-10-30 15:46:45] max_total_num_tokens=93550, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### ds7m94 spec=dspark draft=7 mem=0.94
+- 性能阶段：API 请求失败：Remote end closed connection without response
+SP_END
+[2026-10-30 15:48:53] max_total_num_tokens=70109, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### ds7m92 spec=dspark draft=7 mem=0.92
+| 1 | 完整 | 20.0 | 0 | 0.18491 | 94.68 |
+| 2 | 完整 | 20.0 | 0 | 0.26169 | 133.98 |
+| 4 | 完整 | 20.0 | 0 | 0.34956 | 178.97 |
+| 8 | 完整 | 20.0 | 0 | 0.36655 | 187.67 |
+| 1 | TTFT（秒） | 1.843 | 1.845 | 1.851 | 1.853 |
+| 1 | TPOT（毫秒/token） | 6.972 | 6.656 | 7.897 | 12.680 |
+| 2 | TTFT（秒） | 2.158 | 1.898 | 3.670 | 3.680 |
+| 2 | TPOT（毫秒/token） | 10.458 | 10.189 | 13.178 | 24.613 |
+| 4 | TTFT（秒） | 3.108 | 2.750 | 6.415 | 7.135 |
+| 4 | TPOT（毫秒/token） | 16.221 | 14.966 | 24.085 | 24.749 |
+| 8 | TTFT（秒） | 6.541 | 4.657 | 13.131 | 17.772 |
+| 8 | TPOT（毫秒/token） | 26.927 | 26.796 | 52.017 | 55.415 |
+- 未发现完整性异常。
+      2 #running-req: 2	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 2	accept len: 6.19, accept rate: 0.74
+      1 #running-req: 7	accept len: 7.42, accept rate: 0.92
+      1 #running-req: 7	accept len: 6.37, accept rate: 0.77
+SP_END
+dfqg SERVER_DIED torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 544.00 MiB. GPU 0 has a total capacity of
+SP_END
+[2026-10-30 19:56:29] max_total_num_tokens=70605, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### dw2048 spec=dflash draft=8 mem=0.925
+| 1 | 完整 | 20.0 | 0 | 0.20304 | 103.96 |
+| 2 | 完整 | 20.0 | 0 | 0.28708 | 146.99 |
+| 4 | 完整 | 20.0 | 0 | 0.36591 | 187.35 |
+| 8 | 完整 | 20.0 | 0 | 0.40715 | 208.46 |
+| 1 | TTFT（秒） | 1.862 | 1.864 | 1.868 | 1.868 |
+| 1 | TPOT（毫秒/token） | 5.990 | 5.681 | 7.754 | 9.823 |
+| 2 | TTFT（秒） | 2.091 | 1.915 | 3.666 | 3.682 |
+| 2 | TPOT（毫秒/token） | 9.440 | 9.574 | 10.893 | 14.865 |
+| 4 | TTFT（秒） | 3.551 | 3.697 | 7.355 | 7.371 |
+| 4 | TPOT（毫秒/token） | 14.164 | 13.793 | 21.193 | 22.821 |
+| 8 | TTFT（秒） | 8.205 | 7.572 | 13.267 | 19.080 |
+| 8 | TPOT（毫秒/token） | 21.248 | 18.515 | 36.663 | 36.667 |
+- 未发现完整性异常。
+      3 #running-req: 2	accept len: 8.00, accept rate: 1.00
+      3 #running-req: 1	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 2	accept len: 6.96, accept rate: 0.85
+      2 #running-req: 1	accept len: 7.68, accept rate: 0.95
+SP_END
+[2026-10-30 20:04:12] max_total_num_tokens=70605, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### dw4096 spec=dflash draft=8 mem=0.925
+| 1 | 完整 | 20.0 | 0 | 0.20316 | 104.02 |
+| 2 | 完整 | 20.0 | 0 | 0.28706 | 146.97 |
+| 4 | 完整 | 20.0 | 0 | 0.36566 | 187.22 |
+| 8 | 完整 | 20.0 | 0 | 0.40674 | 208.25 |
+| 1 | TTFT（秒） | 1.863 | 1.863 | 1.866 | 1.867 |
+| 1 | TPOT（毫秒/token） | 5.981 | 5.674 | 7.731 | 9.802 |
+| 2 | TTFT（秒） | 2.094 | 1.916 | 3.683 | 3.699 |
+| 2 | TPOT（毫秒/token） | 9.437 | 9.571 | 10.845 | 14.855 |
+| 4 | TTFT（秒） | 3.553 | 3.701 | 7.360 | 7.377 |
+| 4 | TPOT（毫秒/token） | 14.175 | 13.795 | 21.215 | 22.847 |
+| 8 | TTFT（秒） | 8.212 | 7.579 | 13.280 | 19.102 |
+| 8 | TPOT（毫秒/token） | 21.271 | 18.551 | 36.708 | 36.716 |
+- 未发现完整性异常。
+      3 #running-req: 2	accept len: 8.00, accept rate: 1.00
+      3 #running-req: 1	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 2	accept len: 6.96, accept rate: 0.85
+      2 #running-req: 1	accept len: 7.68, accept rate: 0.95
+SP_END
+[2026-10-30 20:11:55] max_total_num_tokens=70605, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### dw0 spec=dflash draft=8 mem=0.925
+| 1 | 完整 | 20.0 | 0 | 0.20325 | 104.07 |
+| 2 | 完整 | 20.0 | 0 | 0.28728 | 147.09 |
+| 4 | 完整 | 20.0 | 0 | 0.35897 | 183.79 |
+| 8 | 完整 | 20.0 | 0 | 0.39658 | 203.05 |
+| 1 | TTFT（秒） | 1.864 | 1.865 | 1.868 | 1.870 |
+| 1 | TPOT（毫秒/token） | 5.976 | 5.671 | 7.730 | 9.795 |
+| 2 | TTFT（秒） | 2.094 | 1.918 | 3.671 | 3.686 |
+| 2 | TPOT（毫秒/token） | 9.427 | 9.563 | 10.870 | 14.839 |
+| 4 | TTFT（秒） | 3.121 | 1.943 | 7.410 | 7.427 |
+| 4 | TPOT（毫秒/token） | 15.480 | 15.761 | 25.610 | 26.943 |
+| 8 | TTFT（秒） | 7.816 | 7.418 | 13.220 | 17.784 |
+| 8 | TPOT（毫秒/token） | 22.749 | 20.625 | 45.085 | 46.896 |
+- 未发现完整性异常。
+      4 #running-req: 1	accept len: 8.00, accept rate: 1.00
+      3 #running-req: 2	accept len: 8.00, accept rate: 1.00
+      2 #running-req: 2	accept len: 6.96, accept rate: 0.85
+      1 #running-req: 7	accept len: 7.57, accept rate: 0.94
+SP_END
+CHAIN_END
+[2026-10-30 20:32:53] max_total_num_tokens=70605, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### fin0 spec=dflash draft=8 mem=0.925
+| 1 | 完整 | 100.0 | 0 | 0.20467 | 104.79 |
+| 2 | 完整 | 100.0 | 0 | 0.28739 | 147.14 |
+| 4 | 完整 | 100.0 | 0 | 0.36782 | 188.32 |
+| 8 | 完整 | 100.0 | 0 | 0.40906 | 209.44 |
+| 1 | TTFT（秒） | 1.840 | 1.843 | 1.847 | 1.848 |
+| 1 | TPOT（毫秒/token） | 5.956 | 5.747 | 7.127 | 10.326 |
+| 2 | TTFT（秒） | 1.929 | 1.894 | 1.897 | 3.627 |
+| 2 | TPOT（毫秒/token） | 9.815 | 9.600 | 11.605 | 18.712 |
+| 4 | TTFT（秒） | 2.342 | 1.914 | 3.823 | 7.290 |
+| 4 | TPOT（毫秒/token） | 16.635 | 17.219 | 20.831 | 32.791 |
+| 8 | TTFT（秒） | 5.447 | 4.600 | 9.216 | 12.871 |
+| 8 | TPOT（毫秒/token） | 27.282 | 28.643 | 36.449 | 53.630 |
+- 未发现完整性异常。
+      1 #running-req: 7	accept len: 7.91, accept rate: 0.99
+      1 #running-req: 7	accept len: 7.54, accept rate: 0.93
+      1 #running-req: 7	accept len: 7.46, accept rate: 0.92
+      1 #running-req: 7	accept len: 7.44, accept rate: 0.92
+SP_END
+[2026-10-30 20:58:38] max_total_num_tokens=70605, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_reque
+### fin2048 spec=dflash draft=8 mem=0.925
+| 1 | 完整 | 100.0 | 0 | 0.20397 | 104.43 |
+| 2 | 完整 | 100.0 | 0 | 0.28693 | 146.91 |
+| 4 | 完整 | 100.0 | 0 | 0.36556 | 187.16 |
+| 8 | 完整 | 100.0 | 0 | 0.40847 | 209.14 |
+| 1 | TTFT（秒） | 1.843 | 1.845 | 1.850 | 1.852 |
+| 1 | TPOT（毫秒/token） | 5.984 | 5.768 | 7.156 | 10.364 |
+| 2 | TTFT（秒） | 1.936 | 1.901 | 1.905 | 3.636 |
+| 2 | TPOT（毫秒/token） | 9.842 | 9.627 | 11.486 | 18.763 |
+| 4 | TTFT（秒） | 2.400 | 1.917 | 3.734 | 7.291 |
+| 4 | TPOT（毫秒/token） | 16.590 | 17.152 | 22.679 | 33.732 |
+| 8 | TTFT（秒） | 5.453 | 4.360 | 9.823 | 12.864 |
+| 8 | TPOT（毫秒/token） | 27.409 | 25.776 | 43.671 | 92.490 |
+- 未发现完整性异常。
+      2 #running-req: 4	accept len: 6.56, accept rate: 0.79
+      2 #running-req: 4	accept len: 6.47, accept rate: 0.78
+      2 #running-req: 4	accept len: 6.31, accept rate: 0.76
+      1 #running-req: 7	accept len: 7.55, accept rate: 0.94
+SP_END
+N100_END

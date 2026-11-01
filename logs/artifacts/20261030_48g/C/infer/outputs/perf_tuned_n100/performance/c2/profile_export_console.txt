@@ -1,0 +1,69 @@
+
+
+                                            NVIDIA AIPerf | LLM Metrics: Effective                                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓
+┃                                    Metric ┃       avg ┃      min ┃       max ┃       p99 ┃       p90 ┃       p50 ┃      std ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩
+│          Effective Concurrency (requests) │      2.00 │     0.00 │      2.00 │      2.00 │      2.00 │      2.00 │     0.03 │
+│  Effective Decode Throughput (tokens/sec) │    105.70 │     0.00 │    298.05 │    196.87 │    193.88 │    157.89 │    86.03 │
+│ Effective Prefill Throughput (tokens/sec) │  1,694.52 │     0.00 │  8,442.32 │  4,407.00 │  4,226.33 │      0.00 │ 2,061.92 │
+│   Effective Decode Concurrency (requests) │      1.56 │     0.00 │      2.00 │      2.00 │      2.00 │      2.00 │     0.54 │
+│  Effective Prefill Concurrency (requests) │      0.44 │     0.00 │      2.00 │      2.00 │      1.00 │      0.00 │     0.54 │
+│   Effective Total Throughput (tokens/sec) │  1,800.22 │     0.00 │  8,442.32 │  4,407.00 │  4,294.02 │    146.93 │ 2,025.86 │
+│      Effective Decode Throughput Per User │     53.92 │     0.00 │    198.20 │     98.56 │     97.01 │     79.15 │    42.56 │
+│                         (tokens/sec/user) │           │          │           │           │           │           │          │
+│     Effective Prefill Throughput Per User │  1,643.26 │     0.00 │  4,240.89 │  4,232.01 │  4,225.18 │      0.00 │ 2,019.67 │
+│                         (tokens/sec/user) │           │          │           │           │           │           │          │
+│                 Tokens In Flight (tokens) │ 16,775.72 │     0.00 │ 17,403.35 │ 17,336.46 │ 17,129.62 │ 16,783.52 │   335.99 │
+│         Effective Latency (CO-aware) (ms) │  9,666.35 │ 7,060.95 │ 16,471.74 │ 15,332.53 │ 11,372.46 │  9,153.59 │ 1,496.13 │
+└───────────────────────────────────────────┴───────────┴──────────┴───────────┴───────────┴───────────┴───────────┴──────────┘
+                                          NVIDIA AIPerf | LLM Metrics: Active                                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┓
+┃                                 Metric ┃      avg ┃      min ┃      max ┃      p99 ┃      p90 ┃      p50 ┃      std ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━┩
+│  Active Decode Throughput (tokens/sec) │   108.20 │     0.00 │   298.05 │   196.90 │   193.95 │   158.72 │    85.47 │
+│ Active Prefill Throughput (tokens/sec) │ 4,100.29 │ 1,003.69 │ 8,442.32 │ 4,414.17 │ 4,231.58 │ 4,221.60 │   650.50 │
+│      Active Decode Throughput Per User │    55.19 │     0.00 │   198.20 │    98.57 │    97.04 │    81.63 │    42.24 │
+│                      (tokens/sec/user) │          │          │          │          │          │          │          │
+│     Active Prefill Throughput Per User │ 3,976.27 │ 1,003.69 │ 4,240.89 │ 4,238.54 │ 4,229.64 │ 4,220.93 │   770.46 │
+│                      (tokens/sec/user) │          │          │          │          │          │          │          │
+│   Active Total Throughput (tokens/sec) │ 1,800.24 │    38.20 │ 8,442.32 │ 4,407.00 │ 4,294.02 │   146.93 │ 2,025.87 │
+└────────────────────────────────────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+                                         NVIDIA AIPerf | LLM Metrics: Usage                                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┓
+┃                                 Metric ┃        avg ┃      min ┃      max ┃      p99 ┃      p90 ┃      p50 ┃  std ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━┩
+│           Usage Prompt Tokens (tokens) │   8,192.00 │ 8,192.00 │ 8,192.00 │ 8,192.00 │ 8,192.00 │ 8,192.00 │ 0.00 │
+│       Usage Completion Tokens (tokens) │     512.00 │   512.00 │   512.00 │   512.00 │   512.00 │   512.00 │ 0.00 │
+│            Usage Total Tokens (tokens) │   8,704.00 │ 8,704.00 │ 8,704.00 │ 8,704.00 │ 8,704.00 │ 8,704.00 │ 0.00 │
+│     Total Usage Prompt Tokens (tokens) │ 819,200.00 │      N/A │      N/A │      N/A │      N/A │      N/A │  N/A │
+│ Total Usage Completion Tokens (tokens) │  51,200.00 │      N/A │      N/A │      N/A │      N/A │      N/A │  N/A │
+│      Total Usage Total Tokens (tokens) │ 870,400.00 │      N/A │      N/A │      N/A │      N/A │      N/A │  N/A │
+└────────────────────────────────────────┴────────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────┘
+                                                   NVIDIA AIPerf | LLM Metrics                                                   
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┓
+┃                                        Metric ┃      avg ┃      min ┃       max ┃       p99 ┃       p90 ┃      p50 ┃      std ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━┩
+│                      Time to First Token (ms) │ 2,109.64 │ 1,931.67 │  8,161.92 │  3,788.90 │  1,944.94 │ 1,940.69 │   741.24 │
+│                     Time to Second Token (ms) │    84.01 │    44.50 │  1,847.43 │  1,842.62 │     47.44 │    46.49 │   251.72 │
+│               Time to First Output Token (ms) │ 2,109.64 │ 1,931.67 │  8,161.92 │  3,788.90 │  1,944.94 │ 1,940.69 │   741.24 │
+│                          Request Latency (ms) │ 9,665.09 │ 7,059.69 │ 16,470.49 │ 15,331.52 │ 11,371.64 │ 9,152.35 │ 1,496.11 │
+│                          Decode Duration (ms) │ 7,555.46 │ 5,117.36 │ 13,376.65 │ 11,432.50 │  8,941.38 │ 7,206.24 │ 1,279.26 │
+│                      Inter Token Latency (ms) │    14.79 │    10.01 │     26.18 │     22.37 │     17.50 │    14.10 │     2.50 │
+│              Output Token Throughput Per User │    69.39 │    38.20 │     99.86 │     98.13 │     74.33 │    70.91 │    10.91 │
+│                             (tokens/sec/user) │          │          │           │           │           │          │          │
+│ E2E Output Token Throughput (tokens/sec/user) │    54.04 │    31.09 │     72.52 │     71.58 │     57.53 │    55.94 │     7.16 │
+│               Output Sequence Length (tokens) │   512.00 │   512.00 │    512.00 │    512.00 │    512.00 │   512.00 │     0.00 │
+│                Input Sequence Length (tokens) │ 8,192.00 │ 8,192.00 │  8,192.00 │  8,192.00 │  8,192.00 │ 8,192.00 │     0.00 │
+│          Output Token Throughput (tokens/sec) │   105.91 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│           Input Token Throughput (tokens/sec) │ 1,694.52 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│             Request Throughput (requests/sec) │     0.21 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│          Completed Requests (Success + Error) │   100.00 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│                                    (requests) │          │          │           │           │           │          │          │
+│                        Request Error Rate (%) │     0.00 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+│                      Request Count (requests) │   100.00 │      N/A │       N/A │       N/A │       N/A │      N/A │      N/A │
+└───────────────────────────────────────────────┴──────────┴──────────┴───────────┴───────────┴───────────┴──────────┴──────────┘
+
+Token usage is reported but no prompt-cache read tokens were seen (usage.prompt_tokens_details.cached_tokens absent). If your server uses 
+prefix/KV caching, enable cache reporting so AIPerf can populate the prompt-cache metrics: vLLM --enable-prompt-tokens-details, SGLang 
+--enable-cache-report (TRT-LLM reports it by default).

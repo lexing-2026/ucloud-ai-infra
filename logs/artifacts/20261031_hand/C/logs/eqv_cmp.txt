@@ -1,0 +1,8 @@
+3000 2431 hand==triton first: False 63 | hand 1st==2nd: False 63 | triton 1st==2nd: False 63 | len 528
+5000 4031 hand==triton first: False 0 | hand 1st==2nd: False 0 | triton 1st==2nd: False 246 | len 117
+9000 7225 hand==triton first: False 73 | hand 1st==2nd: False 0 | triton 1st==2nd: False 0 | len 108
+15000 12019 hand==triton first: False 70 | hand 1st==2nd: False 48 | triton 1st==2nd: False 0 | len 517
+24000 19249 hand==triton first: False 0 | hand 1st==2nd: False 27 | triton 1st==2nd: False 0 | len 248
+30000 24101 hand==triton first: False 0 | hand 1st==2nd: True 111 | triton 1st==2nd: False 8 | len 111
+37000 29761 hand==triton first: False 59 | hand 1st==2nd: False 0 | triton 1st==2nd: False 0 | len 250
+EQV_END

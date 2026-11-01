@@ -1,0 +1,27 @@
+{"lens": [8192], "prefix": [false], "q": true, "k": true, "v": true, "state": true}
+{"lens": [8192], "prefix": [true], "q": true, "k": true, "v": true, "state": true}
+{"lens": [1], "prefix": [false], "q": true, "k": true, "v": true, "state": true}
+{"lens": [1], "prefix": [true], "q": true, "k": true, "v": true, "state": true}
+{"lens": [3], "prefix": [true], "q": true, "k": true, "v": true, "state": true}
+{"lens": [7, 1, 9], "prefix": [false, true, false], "q": true, "k": true, "v": true, "state": true}
+{"lens": [8, 16, 24, 33], "prefix": [true, false, true, false], "q": true, "k": true, "v": true, "state": true}
+{"lens": [2048, 2048, 2048, 2048], "prefix": [false, false, true, true], "q": true, "k": true, "v": true, "state": true}
+{"lens": [8192, 8192], "prefix": [false, true], "q": true, "k": true, "v": true, "state": true}
+{"lens": [4097, 3, 12000], "prefix": [true, false, false], "q": true, "k": true, "v": true, "state": true}
+CONV_BAD 0
+/root/infer/sg22/lib/python3.12/site-packages/triton/language/core.py:2625: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+  warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+{"T": 64, "lens": null, "nan": 0}
+{"T": 100, "lens": null, "nan": 0}
+{"T": 8192, "lens": null, "nan": 0}
+{"T": 100, "lens": [40, 60], "nan": 0}
+{"T": 8192, "lens": [1000, 7192], "nan": 0}
+{"T": 77, "lens": [1, 1, 75], "nan": 0}
+O_END
+{"round": 0, "name": "old", "ms_layer": 0.873}
+{"round": 0, "name": "new", "ms_layer": 0.445}
+{"round": 1, "name": "old", "ms_layer": 0.748}
+{"round": 1, "name": "new", "ms_layer": 0.379}
+{"round": 2, "name": "old", "ms_layer": 0.747}
+{"round": 2, "name": "new", "ms_layer": 0.379}
+GDN_END 0

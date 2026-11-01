@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 2,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 2088.01992785,
+      "p50": 1895.1943795,
+      "p95": 3673.32872695,
+      "p99": 3676.77263263
+    },
+    "inter_token_latency": {
+      "mean": 10.389452234853229,
+      "p50": 10.390806569471623,
+      "p95": 13.75697126056751,
+      "p99": 21.597182744050908
+    },
+    "request_latency": {
+      "mean": 7397.03001986,
+      "p50": 7202.9316815,
+      "p95": 9497.5611091,
+      "p99": 12941.332466270016
+    }
+  },
+  "benchmark_duration": 370.01432832,
+  "request_throughput": 0.27025725737602335,
+  "output_token_throughput": 138.37171577652396,
+  "artifacts": "/root/infer/outputs/perf_dsfinal/performance/c2"
+}

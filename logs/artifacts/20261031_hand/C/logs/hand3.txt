@@ -1,0 +1,12 @@
+Using default W8A8 Block FP8 kernel config. Performance might be sub-optimal! Config file not found at /root/infer/sg22/lib/python3.12/site-packages/sglang/kernels/ops/gemm/configs/N=2048,K=512,device_name=NVIDIA_GeForce_RTX_4090,dtype=fp8_w8a8,block_shape=[128, 128].json
+{"N": 2048, "K": 512, "M": 64, "max_abs": 6.103515625e-05, "rel": 1.1096651775233113e-07, "nan": 0, "bad": 0}
+{"N": 5120, "K": 6144, "M": 128, "max_abs": 0.000244140625, "rel": 6.429112886507937e-08, "nan": 0, "bad": 0}
+{"N": 5120, "K": 6144, "M": 200, "max_abs": 0.000244140625, "rel": 1.1257650811558051e-07, "nan": 0, "bad": 0}
+{"N": 14336, "K": 5120, "M": 257, "max_abs": 0.00048828125, "rel": 6.795958285010784e-08, "nan": 0, "bad": 0}
+CHECK_END
+{"N": 34816, "K": 5120, "triton_ms": 10.089, "s2": 9.082, "s2_x": 1.111, "s3": 10.141, "s3_x": 0.995, "s2_tail": 9.223, "s2_tail_x": 1.094, "tflops_triton": 289.5}
+{"N": 16384, "K": 5120, "triton_ms": 4.555, "s2": 4.305, "s2_x": 1.058, "s3": 4.771, "s3_x": 0.955, "s2_tail": 4.21, "s2_tail_x": 1.082, "tflops_triton": 301.8}
+{"N": 14336, "K": 5120, "triton_ms": 4.015, "s2": 3.787, "s2_x": 1.06, "s3": 4.207, "s3_x": 0.954, "s2_tail": 3.704, "s2_tail_x": 1.084, "tflops_triton": 299.5}
+{"N": 5120, "K": 17408, "triton_ms": 4.776, "s2": 4.582, "s2_x": 1.043, "s3": 4.984, "s3_x": 0.958, "s2_tail": 4.438, "s2_tail_x": 1.076, "tflops_triton": 305.7}
+{"N": 5120, "K": 6144, "triton_ms": 1.728, "s2": 1.665, "s2_x": 1.038, "s3": 1.842, "s3_x": 0.938, "s2_tail": 1.628, "s2_tail_x": 1.061, "tflops_triton": 298.3}
+BENCH_END

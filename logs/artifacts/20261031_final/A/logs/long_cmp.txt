@@ -1,0 +1,8 @@
+0 63 3000 chars 12097 common 96 diff steps 832 483
+1 660 3000 chars 6678 common 139 diff steps 486 862
+2 2956 3000 chars 4215 common 31 diff steps 295 1046
+3 11531 3000 chars 11050 common 2 diff steps 755 241
+4 27902 1500 chars 2100 common 179 diff steps 150 142
+5 115 3000 chars 8544 common 23 diff steps 255 256
+6 420 3000 chars 13213 common 251 diff steps 751 839
+7 6006 3000 chars 10607 common 39 diff steps 739 628

@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 4,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 3623.8135608999996,
+      "p50": 3777.3031825,
+      "p95": 7501.591512349999,
+      "p99": 7518.77428167
+    },
+    "inter_token_latency": {
+      "mean": 14.502295882289626,
+      "p50": 14.107620642857142,
+      "p95": 18.35671107945206,
+      "p99": 25.60029046168296
+    },
+    "request_latency": {
+      "mean": 11034.48675675,
+      "p50": 10962.520241499999,
+      "p95": 14915.882822500002,
+      "p99": 17195.429915699995
+    }
+  },
+  "benchmark_duration": 55.902600448,
+  "request_throughput": 0.35774131906922074,
+  "output_token_throughput": 183.16355536344102,
+  "artifacts": "/root/infer/outputs/perf_df8m925/performance/c4"
+}

@@ -1,0 +1,80 @@
+{
+  "started_at": "2026-10-31T11:30:24.203210+00:00",
+  "configuration": {
+    "mode": "perf",
+    "base_url": "http://127.0.0.1:30000/v1",
+    "model": "qwen3.8-27b-fp8",
+    "tokenizer": "builtin",
+    "tokenizer_revision": null,
+    "api_key_env": "OPENAI_API_KEY",
+    "output_dir": "/root/infer/outputs/perf_rg7",
+    "env_dir": "/root/.cache/ai-infra-eval/envs",
+    "perf_requests": 20,
+    "eval_batch_size": 2,
+    "request_timeout": 600,
+    "seed": 42,
+    "dry_run": false,
+    "isl": 8192,
+    "osl": 512,
+    "concurrencies": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "warmup_requests": 8,
+    "accuracy_limit": 100,
+    "accuracy_generation_config": {
+      "max_tokens": 32768
+    }
+  },
+  "status": "已中断",
+  "issues": [
+    "用户中断；已终止评测子进程，保留已完成及部分原生结果。"
+  ],
+  "performance": [
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 1,
+      "expected_requests": 20,
+      "records": 20,
+      "valid_records": 20,
+      "successful_requests": 20.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 1746.1333769500002,
+          "p50": 1746.1253025,
+          "p95": 1747.05284395,
+          "p99": 1747.6055607899998
+        },
+        "inter_token_latency": {
+          "mean": 16.269646484540118,
+          "p50": 15.415211628180039,
+          "p95": 21.771482334344423,
+          "p99": 22.38356202772994
+        },
+        "request_latency": {
+          "mean": 10059.922730549999,
+          "p50": 9623.764191999999,
+          "p95": 12870.39743885,
+          "p99": 13183.899914169999
+        }
+      },
+      "benchmark_duration": 201.231444224,
+      "request_throughput": 0.09938674982147432,
+      "output_token_throughput": 50.88601590859485,
+      "artifacts": "/root/infer/outputs/perf_rg7/performance/c1"
+    }
+  ],
+  "ended_at": "2026-10-31T11:38:29.836228+00:00"
+}

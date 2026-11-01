@@ -1,0 +1,22 @@
+使用内置 tiktoken/o200k_base：输入目标 8192 按 tiktoken 计数；服务端实际输入长度会单独列入报告。
+执行：/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/python /root/infer/eval/runner.py _dataset builtin '' /root/infer/outputs/perf_tuned_n100_r2/performance/dataset.jsonl 109 42
+
+性能测试：并发 1，正式 100，预热 8
+执行：/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/aiperf profile --model qwen3.8-27b-fp8 --url http://127.0.0.1:30000 --endpoint /v1/completions --endpoint-type completions --streaming --tokenizer builtin --use-server-token-count --use-legacy-max-tokens --input-file /root/infer/outputs/perf_tuned_n100_r2/performance/dataset.jsonl --custom-dataset-type single-turn --dataset-sampling-strategy sequential --random-seed 42 --extra-inputs '{"ignore_eos": true, "temperature": 0, "cache_salt": "211078c0dfaf45afb829594537bc6abe:c1"}' --concurrency 1 --request-count 100 --warmup-request-count 8 --workers-max 2 --request-timeout-seconds 600 --export-level records --artifact-dir /root/infer/outputs/perf_tuned_n100_r2/performance/c1 --ui none --no-gpu-telemetry --api-key EMPTY
+并发 1：完整；长度和统计核验完成
+
+性能测试：并发 2，正式 100，预热 8
+执行：/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/aiperf profile --model qwen3.8-27b-fp8 --url http://127.0.0.1:30000 --endpoint /v1/completions --endpoint-type completions --streaming --tokenizer builtin --use-server-token-count --use-legacy-max-tokens --input-file /root/infer/outputs/perf_tuned_n100_r2/performance/dataset.jsonl --custom-dataset-type single-turn --dataset-sampling-strategy sequential --random-seed 42 --extra-inputs '{"ignore_eos": true, "temperature": 0, "cache_salt": "211078c0dfaf45afb829594537bc6abe:c2"}' --concurrency 2 --request-count 100 --warmup-request-count 8 --workers-max 2 --request-timeout-seconds 600 --export-level records --artifact-dir /root/infer/outputs/perf_tuned_n100_r2/performance/c2 --ui none --no-gpu-telemetry --api-key EMPTY
+并发 2：完整；长度和统计核验完成
+
+性能测试：并发 4，正式 100，预热 8
+执行：/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/aiperf profile --model qwen3.8-27b-fp8 --url http://127.0.0.1:30000 --endpoint /v1/completions --endpoint-type completions --streaming --tokenizer builtin --use-server-token-count --use-legacy-max-tokens --input-file /root/infer/outputs/perf_tuned_n100_r2/performance/dataset.jsonl --custom-dataset-type single-turn --dataset-sampling-strategy sequential --random-seed 42 --extra-inputs '{"ignore_eos": true, "temperature": 0, "cache_salt": "211078c0dfaf45afb829594537bc6abe:c4"}' --concurrency 4 --request-count 100 --warmup-request-count 8 --workers-max 2 --request-timeout-seconds 600 --export-level records --artifact-dir /root/infer/outputs/perf_tuned_n100_r2/performance/c4 --ui none --no-gpu-telemetry --api-key EMPTY
+并发 4：完整；长度和统计核验完成
+
+性能测试：并发 8，正式 100，预热 8
+执行：/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/aiperf profile --model qwen3.8-27b-fp8 --url http://127.0.0.1:30000 --endpoint /v1/completions --endpoint-type completions --streaming --tokenizer builtin --use-server-token-count --use-legacy-max-tokens --input-file /root/infer/outputs/perf_tuned_n100_r2/performance/dataset.jsonl --custom-dataset-type single-turn --dataset-sampling-strategy sequential --random-seed 42 --extra-inputs '{"ignore_eos": true, "temperature": 0, "cache_salt": "211078c0dfaf45afb829594537bc6abe:c8"}' --concurrency 8 --request-count 100 --warmup-request-count 8 --workers-max 2 --request-timeout-seconds 600 --export-level records --artifact-dir /root/infer/outputs/perf_tuned_n100_r2/performance/c8 --ui none --no-gpu-telemetry --api-key EMPTY
+并发 8：完整；长度和统计核验完成
+
+评测状态：完整
+Markdown 报告：/root/infer/outputs/perf_tuned_n100_r2/report.md
+OFFICIAL_DONE

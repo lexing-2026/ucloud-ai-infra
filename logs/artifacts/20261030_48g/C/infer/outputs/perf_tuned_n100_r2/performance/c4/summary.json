@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 4,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 2189.3046815899997,
+      "p50": 1953.9422384999998,
+      "p95": 3757.4069548999996,
+      "p99": 7403.54436608
+    },
+    "inter_token_latency": {
+      "mean": 22.58017545634051,
+      "p50": 22.122414972602737,
+      "p95": 28.47274306956947,
+      "p99": 32.940924284422714
+    },
+    "request_latency": {
+      "mean": 13727.77433978,
+      "p50": 13283.940464,
+      "p95": 17998.8428472,
+      "p99": 20421.98535482
+    }
+  },
+  "benchmark_duration": 345.711069184,
+  "request_throughput": 0.2892557837497405,
+  "output_token_throughput": 148.09896127986713,
+  "artifacts": "/root/infer/outputs/perf_tuned_n100_r2/performance/c4"
+}

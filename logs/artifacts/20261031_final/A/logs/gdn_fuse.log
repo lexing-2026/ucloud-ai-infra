@@ -1,0 +1,32 @@
+/root/infer/sg22/lib/python3.12/site-packages/triton/language/core.py:2625: UserWarning: tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.
+  warn("tl.make_block_ptr is deprecated. Use TensorDescriptor or tl.make_tensor_descriptor instead.")
+{"BV": 32, "W": 4, "lens": [8192], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [64], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [65], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [1], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [9], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [100, 28], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [1000, 7192], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 32, "W": 4, "lens": [1, 1, 75, 64, 129], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [8192], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [64], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [65], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [1], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [9], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [100, 28], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [1000, 7192], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+{"BV": 64, "W": 4, "lens": [1, 1, 75, 64, 129], "o_rel": 0.0, "o_max": 0.0, "nan": 0, "state": true, "snap": 0.0}
+CHECK_END 0
+{"name": "h+o", "ms": 1.186}
+{"c": [32, 4, 2], "ms": 0.969}
+{"c": [32, 2, 2], "ms": 1.631}
+{"c": [32, 8, 2], "ms": 1.481}
+{"c": [64, 2, 2], "ms": 1.561}
+{"c": [64, 4, 2], "ms": 0.676}
+{"c": [64, 8, 2], "ms": 1.106}
+{"c": [64, 4, 3], "err": "out of resource: shared memory, Required: 157192, Hardware limit: 101376. Reducing block sizes or `num_stages` may help."}
+{"c": [128, 4, 2], "ms": 1.43}
+{"c": [128, 8, 2], "ms": 1.035}
+{"c": [128, 16, 2], "ms": 1.229}
+{"c": [16, 4, 2], "ms": 1.114}
+FUSE_END

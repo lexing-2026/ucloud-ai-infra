@@ -1,0 +1,4 @@
+profiler rc=1 ValueError: DP rank 0 reports simulate_acc_len=None, but SPS profiling requires exactly SGLANG_SIMULATE_ACC_LEN=1.0 (spec fully ineffective: every step advances
+RG_END
+profiler rc=0   binary = _find_compiler_bin()
+RG_END

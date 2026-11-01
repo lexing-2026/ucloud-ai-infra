@@ -1,0 +1,6 @@
+1 63 len 6.62 rate 0.623
+2 24 len 8.04 rate 0.782
+3 1 len 8.36 rate 0.820
+4 12 len 7.53 rate 0.726
+6 1 len 9.28 rate 0.920
+7 5 len 7.24 rate 0.694

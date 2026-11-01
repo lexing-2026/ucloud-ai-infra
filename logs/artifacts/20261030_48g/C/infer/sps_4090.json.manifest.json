@@ -1,0 +1,108 @@
+{
+  "base_url": "http://127.0.0.1:30000",
+  "tp_size": 1,
+  "dp_size": 1,
+  "verify_num_draft_tokens": 8,
+  "simulate_acc_len": 1.0,
+  "batch_size_per_rank_sweep": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "fracs": null,
+  "settings": {
+    "input_len": 16,
+    "temperature": 1.0,
+    "min_steady_steps": 32,
+    "min_steady_seconds": 10.0,
+    "round_timeout_seconds": 300.0,
+    "ramp_token_slack": 0
+  },
+  "repeats": 1,
+  "seed": 42,
+  "timestamp": 1793380434.3438091,
+  "timestamp_iso": "2026-10-30T17:13:54+0000",
+  "conversion_formula": "batch_tokens = num_running_reqs_per_rank * verify_num_draft_tokens; steps_per_sec = 1 / median(server-side step_time over aligned steady steps)",
+  "static_conditioning_caveat": "Profiled with SGLANG_RAGGED_VERIFY_MODE=static: a verify step of B tokens comes from B/(gamma+1) requests, the fewest possible for that B. A compact-mode step with the same B usually spans more requests and reads more KV history, so the table slightly over-estimates steps_per_sec and the scheduler may admit slightly more than optimal. Much smaller bias than the retired non-spec decode proxy, and in the opposite direction.",
+  "records_jsonl": "sps_4090.records.jsonl",
+  "rounds_jsonl": "sps_4090.rounds.jsonl",
+  "round_summaries": [
+    {
+      "repeat": 0,
+      "batch_size": 1,
+      "batch_size_per_rank": 1,
+      "frac": null,
+      "batch_tokens": 8,
+      "steps_per_sec": 24.712531477586968,
+      "num_steady_steps": 290,
+      "match_fraction": 1.0,
+      "per_rank_median_step_time": [
+        0.0404653
+      ],
+      "load_info": {
+        "num_requests": 1,
+        "max_new_tokens": 572,
+        "wall_seconds": 12.348,
+        "reached_target": true
+      }
+    },
+    {
+      "repeat": 0,
+      "batch_size": 2,
+      "batch_size_per_rank": 2,
+      "frac": null,
+      "batch_tokens": 16,
+      "steps_per_sec": 23.58813233885767,
+      "num_steady_steps": 284,
+      "match_fraction": 1.0,
+      "per_rank_median_step_time": [
+        0.04239420000000001
+      ],
+      "load_info": {
+        "num_requests": 2,
+        "max_new_tokens": 572,
+        "wall_seconds": 12.516,
+        "reached_target": true
+      }
+    },
+    {
+      "repeat": 0,
+      "batch_size": 4,
+      "batch_size_per_rank": 4,
+      "frac": null,
+      "batch_tokens": 32,
+      "steps_per_sec": 21.794991946750475,
+      "num_steady_steps": 261,
+      "match_fraction": 1.0,
+      "per_rank_median_step_time": [
+        0.0458821
+      ],
+      "load_info": {
+        "num_requests": 4,
+        "max_new_tokens": 572,
+        "wall_seconds": 12.49,
+        "reached_target": true
+      }
+    },
+    {
+      "repeat": 0,
+      "batch_size": 8,
+      "batch_size_per_rank": 8,
+      "frac": null,
+      "batch_tokens": 64,
+      "steps_per_sec": 18.38764276855382,
+      "num_steady_steps": 222,
+      "match_fraction": 1.0,
+      "per_rank_median_step_time": [
+        0.05438435
+      ],
+      "load_info": {
+        "num_requests": 8,
+        "max_new_tokens": 572,
+        "wall_seconds": 12.649,
+        "reached_target": true
+      }
+    }
+  ]
+}

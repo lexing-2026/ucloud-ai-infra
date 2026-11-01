@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 4,
+  "expected_requests": 20,
+  "records": 20,
+  "valid_records": 20,
+  "successful_requests": 20.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 2145.7213487,
+      "p50": 1664.1774434999998,
+      "p95": 4964.186188550001,
+      "p99": 6197.488022509998
+    },
+    "inter_token_latency": {
+      "mean": 14.74997147250489,
+      "p50": 15.066274655577299,
+      "p95": 23.01493598816047,
+      "p99": 23.44558244616438
+    },
+    "request_latency": {
+      "mean": 9682.95677115,
+      "p50": 9490.004335,
+      "p95": 13505.65329745,
+      "p99": 14939.576768289997
+    }
+  },
+  "benchmark_duration": 49.34733568,
+  "request_throughput": 0.4052682697233406,
+  "output_token_throughput": 207.4973540983504,
+  "artifacts": "/root/infer/outputs/perf_anb10/performance/c4"
+}

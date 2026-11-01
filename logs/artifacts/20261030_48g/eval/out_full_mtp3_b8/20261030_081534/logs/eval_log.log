@@ -1,0 +1,180 @@
+2026-10-30 08:15:34 - evalscope - INFO: Running with native backend
+2026-10-30 08:15:35 - evalscope - INFO: Dump task config to /root/eval/out_full_mtp3_b8/20261030_081534/configs/task_config.yaml
+2026-10-30 08:15:35 - evalscope - INFO: {
+    "model_id": "qwen3.8-27b-fp8",
+    "model_args": {},
+    "model_task": "text_generation",
+    "chat_template": null,
+    "datasets": [
+        "ifbench"
+    ],
+    "dataset_args": {},
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "repeats": 1,
+    "eval_type": "openai_api",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "limit": 100,
+    "eval_batch_size": 8,
+    "use_cache": null,
+    "rerun_review": false,
+    "work_dir": "/root/eval/out_full_mtp3_b8/20261030_081534",
+    "no_timestamp": false,
+    "enable_progress_tracker": false,
+    "ignore_errors": false,
+    "debug": false,
+    "seed": 42,
+    "api_url": "http://127.0.0.1:8000/v1",
+    "api_key": "**********",
+    "timeout": 3600.0,
+    "stream": null,
+    "judge": {
+        "strategy": "auto",
+        "models": [],
+        "contract": {
+            "system_prompt": null,
+            "prompt_template": null,
+            "score_mapping": null,
+            "score_type": "pattern"
+        },
+        "repeats": 1,
+        "position_swap": "auto",
+        "aggregation": "mean",
+        "min_valid_judges": 1
+    },
+    "analysis_report": false,
+    "collect_perf": true,
+    "use_sandbox": false,
+    "sandbox_type": "docker",
+    "sandbox_manager_config": {},
+    "evalscope_version": "1.13.0",
+    "model": "qwen3.8-27b-fp8",
+    "generation_config": {
+        "timeout": 3600.0,
+        "batch_size": 8,
+        "max_tokens": 32768
+    },
+    "sandbox": {
+        "enabled": false,
+        "engine": "docker",
+        "default_config": {},
+        "manager_config": {},
+        "pool_size": null
+    },
+    "agent_config": null
+}
+2026-10-30 08:15:35 - evalscope - INFO: Start loading benchmark dataset: ifbench
+2026-10-30 08:15:35 - evalscope - WARNING: ifbench: 100 samples to evaluate (1 subset, --limit=100 per subset). Remove `--limit` for a formal evaluation.
+2026-10-30 08:15:35 - evalscope - INFO: Subsets of ifbench: ['default']
+2026-10-30 08:15:35 - evalscope - INFO: Loading model for prediction...
+2026-10-30 08:15:35 - evalscope - INFO: Creating model qwen3.8-27b-fp8 with eval_type=openai_api base_url=http://127.0.0.1:8000/v1, config={'timeout': 3600.0, 'retries': 5, 'retry_interval': 10, 'batch_size': 8, 'max_tokens': 32768, 'anthropic_cache_strategy': 'evaluation'}, model_args={}
+2026-10-30 08:15:35 - evalscope - INFO: Model loaded successfully.
+2026-10-30 08:16:35 - evalscope - INFO: Evaluating[ifbench]   0%| 0/100 [Elapsed: 01:00 < Remaining: ?, ?it/s]
+2026-10-30 08:17:35 - evalscope - INFO: Evaluating[ifbench]   3%| 3/100 [Elapsed: 02:00 < Remaining: 44:12, 27.35s/it]
+2026-10-30 08:18:35 - evalscope - INFO: Evaluating[ifbench]   7%| 7/100 [Elapsed: 03:00 < Remaining: 27:44, 17.90s/it]
+2026-10-30 08:19:35 - evalscope - INFO: Evaluating[ifbench]   7%| 7/100 [Elapsed: 04:00 < Remaining: 27:44, 17.90s/it]
+2026-10-30 08:20:35 - evalscope - INFO: Evaluating[ifbench]  10%| 10/100 [Elapsed: 05:00 < Remaining: 42:42, 28.47s/it]
+2026-10-30 08:21:35 - evalscope - INFO: Evaluating[ifbench]  17%| 17/100 [Elapsed: 06:00 < Remaining: 13:15,  9.58s/it]
+2026-10-30 08:22:35 - evalscope - INFO: Evaluating[ifbench]  18%| 18/100 [Elapsed: 07:00 < Remaining: 21:42, 15.88s/it]
+2026-10-30 08:23:35 - evalscope - INFO: Evaluating[ifbench]  22%| 22/100 [Elapsed: 08:00 < Remaining: 26:52, 20.67s/it]
+2026-10-30 08:24:35 - evalscope - INFO: Evaluating[ifbench]  26%| 26/100 [Elapsed: 09:00 < Remaining: 17:07, 13.88s/it]
+2026-10-30 08:25:35 - evalscope - INFO: Evaluating[ifbench]  29%| 29/100 [Elapsed: 10:00 < Remaining: 19:38, 16.60s/it]
+2026-10-30 08:26:35 - evalscope - INFO: Evaluating[ifbench]  31%| 31/100 [Elapsed: 11:00 < Remaining: 23:07, 20.11s/it]
+2026-10-30 08:27:35 - evalscope - INFO: Evaluating[ifbench]  33%| 33/100 [Elapsed: 12:00 < Remaining: 31:30, 28.22s/it]
+2026-10-30 08:28:35 - evalscope - INFO: Evaluating[ifbench]  33%| 33/100 [Elapsed: 13:00 < Remaining: 31:30, 28.22s/it]
+2026-10-30 08:29:35 - evalscope - INFO: Evaluating[ifbench]  34%| 34/100 [Elapsed: 14:00 < Remaining: 47:03, 42.77s/it]
+2026-10-30 08:30:35 - evalscope - INFO: Evaluating[ifbench]  34%| 34/100 [Elapsed: 15:00 < Remaining: 47:03, 42.77s/it]
+2026-10-30 08:31:35 - evalscope - INFO: Evaluating[ifbench]  34%| 34/100 [Elapsed: 16:00 < Remaining: 47:03, 42.77s/it]
+2026-10-30 08:32:35 - evalscope - INFO: Evaluating[ifbench]  37%| 37/100 [Elapsed: 17:00 < Remaining: 54:54, 52.30s/it]
+2026-10-30 08:33:35 - evalscope - INFO: Evaluating[ifbench]  37%| 37/100 [Elapsed: 18:00 < Remaining: 54:54, 52.30s/it]
+2026-10-30 08:34:35 - evalscope - INFO: Evaluating[ifbench]  40%| 40/100 [Elapsed: 19:00 < Remaining: 35:58, 35.98s/it]
+2026-10-30 08:35:35 - evalscope - INFO: Evaluating[ifbench]  42%| 42/100 [Elapsed: 20:00 < Remaining: 35:19, 36.54s/it]
+2026-10-30 08:36:35 - evalscope - INFO: Evaluating[ifbench]  44%| 44/100 [Elapsed: 21:00 < Remaining: 31:24, 33.66s/it]
+2026-10-30 08:37:35 - evalscope - INFO: Evaluating[ifbench]  45%| 45/100 [Elapsed: 22:00 < Remaining: 36:10, 39.46s/it]
+2026-10-30 08:38:35 - evalscope - INFO: Evaluating[ifbench]  47%| 47/100 [Elapsed: 23:00 < Remaining: 27:41, 31.35s/it]
+2026-10-30 08:39:35 - evalscope - INFO: Evaluating[ifbench]  48%| 48/100 [Elapsed: 24:00 < Remaining: 26:33, 30.64s/it]
+2026-10-30 08:40:35 - evalscope - INFO: Evaluating[ifbench]  49%| 49/100 [Elapsed: 25:00 < Remaining: 30:28, 35.86s/it]
+2026-10-30 08:41:35 - evalscope - INFO: Evaluating[ifbench]  51%| 51/100 [Elapsed: 26:00 < Remaining: 35:49, 43.86s/it]
+2026-10-30 08:42:35 - evalscope - INFO: Evaluating[ifbench]  51%| 51/100 [Elapsed: 27:00 < Remaining: 35:49, 43.86s/it]
+2026-10-30 08:43:35 - evalscope - INFO: Evaluating[ifbench]  51%| 51/100 [Elapsed: 28:00 < Remaining: 35:49, 43.86s/it]
+2026-10-30 08:44:35 - evalscope - INFO: Evaluating[ifbench]  55%| 55/100 [Elapsed: 29:00 < Remaining: 26:01, 34.70s/it]
+2026-10-30 08:45:35 - evalscope - INFO: Evaluating[ifbench]  60%| 60/100 [Elapsed: 30:00 < Remaining: 11:12, 16.82s/it]
+2026-10-30 08:46:35 - evalscope - INFO: Evaluating[ifbench]  61%| 61/100 [Elapsed: 31:00 < Remaining: 14:28, 22.28s/it]
+2026-10-30 08:47:35 - evalscope - INFO: Evaluating[ifbench]  62%| 62/100 [Elapsed: 32:00 < Remaining: 19:11, 30.30s/it]
+2026-10-30 08:48:35 - evalscope - INFO: Evaluating[ifbench]  65%| 65/100 [Elapsed: 33:00 < Remaining: 15:19, 26.26s/it]
+2026-10-30 08:49:35 - evalscope - INFO: Evaluating[ifbench]  69%| 69/100 [Elapsed: 34:00 < Remaining: 07:41, 14.88s/it]
+2026-10-30 08:50:35 - evalscope - INFO: Evaluating[ifbench]  72%| 72/100 [Elapsed: 35:00 < Remaining: 06:49, 14.64s/it]
+2026-10-30 08:51:35 - evalscope - INFO: Evaluating[ifbench]  74%| 74/100 [Elapsed: 36:00 < Remaining: 10:28, 24.19s/it]
+2026-10-30 08:52:36 - evalscope - INFO: Evaluating[ifbench]  75%| 75/100 [Elapsed: 37:00 < Remaining: 08:33, 20.53s/it]
+2026-10-30 08:53:36 - evalscope - INFO: Evaluating[ifbench]  75%| 75/100 [Elapsed: 38:00 < Remaining: 08:33, 20.53s/it]
+2026-10-30 08:54:36 - evalscope - INFO: Evaluating[ifbench]  77%| 77/100 [Elapsed: 39:00 < Remaining: 18:04, 47.15s/it]
+2026-10-30 08:55:36 - evalscope - INFO: Evaluating[ifbench]  79%| 79/100 [Elapsed: 40:00 < Remaining: 13:10, 37.66s/it]
+2026-10-30 08:56:36 - evalscope - INFO: Evaluating[ifbench]  81%| 81/100 [Elapsed: 41:00 < Remaining: 07:45, 24.52s/it]
+2026-10-30 08:57:36 - evalscope - INFO: Evaluating[ifbench]  82%| 82/100 [Elapsed: 42:00 < Remaining: 11:37, 38.77s/it]
+2026-10-30 08:58:36 - evalscope - INFO: Evaluating[ifbench]  83%| 83/100 [Elapsed: 43:00 < Remaining: 11:30, 40.64s/it]
+2026-10-30 08:59:36 - evalscope - INFO: Evaluating[ifbench]  84%| 84/100 [Elapsed: 44:00 < Remaining: 14:28, 54.26s/it]
+2026-10-30 09:00:36 - evalscope - INFO: Evaluating[ifbench]  86%| 86/100 [Elapsed: 45:00 < Remaining: 09:33, 40.93s/it]
+2026-10-30 09:01:36 - evalscope - INFO: Evaluating[ifbench]  89%| 89/100 [Elapsed: 46:00 < Remaining: 04:52, 26.62s/it]
+2026-10-30 09:02:36 - evalscope - INFO: Evaluating[ifbench]  89%| 89/100 [Elapsed: 47:00 < Remaining: 04:52, 26.62s/it]
+2026-10-30 09:03:36 - evalscope - INFO: Evaluating[ifbench]  93%| 93/100 [Elapsed: 48:01 < Remaining: 02:43, 23.29s/it]
+2026-10-30 09:04:36 - evalscope - INFO: Evaluating[ifbench]  94%| 94/100 [Elapsed: 49:01 < Remaining: 01:54, 19.00s/it]
+2026-10-30 09:05:36 - evalscope - INFO: Evaluating[ifbench]  95%| 95/100 [Elapsed: 50:01 < Remaining: 03:21, 40.31s/it]
+2026-10-30 09:06:36 - evalscope - INFO: Evaluating[ifbench]  96%| 96/100 [Elapsed: 51:01 < Remaining: 03:25, 51.32s/it]
+2026-10-30 09:07:36 - evalscope - INFO: Evaluating[ifbench]  96%| 96/100 [Elapsed: 52:01 < Remaining: 03:25, 51.32s/it]
+2026-10-30 09:08:36 - evalscope - INFO: Evaluating[ifbench]  96%| 96/100 [Elapsed: 53:01 < Remaining: 03:25, 51.32s/it]
+2026-10-30 09:09:36 - evalscope - INFO: Evaluating[ifbench]  97%| 97/100 [Elapsed: 54:01 < Remaining: 04:09, 83.04s/it]
+2026-10-30 09:10:36 - evalscope - INFO: Evaluating[ifbench]  97%| 97/100 [Elapsed: 55:01 < Remaining: 04:09, 83.04s/it]
+2026-10-30 09:11:36 - evalscope - INFO: Evaluating[ifbench]  97%| 97/100 [Elapsed: 56:01 < Remaining: 04:09, 83.04s/it]
+2026-10-30 09:12:36 - evalscope - INFO: Evaluating[ifbench]  98%| 98/100 [Elapsed: 57:01 < Remaining: 03:38, 109.44s/it]
+2026-10-30 09:13:36 - evalscope - INFO: Evaluating[ifbench]  99%| 99/100 [Elapsed: 58:01 < Remaining: 01:41, 101.21s/it]
+2026-10-30 09:13:53 - evalscope - INFO: Evaluating[ifbench] 100%| 100/100 [Elapsed: 58:18 < Remaining: 00:00, 81.40s/it]
+2026-10-30 09:13:53 - evalscope - INFO: ifbench: predictions complete, aggregating scores...
+2026-10-30 09:13:53 - evalscope - INFO: Aggregating scores for subset: default
+2026-10-30 09:13:53 - evalscope - INFO: Generating report...
+2026-10-30 09:13:53 - evalscope - INFO: 
+ifbench report table:
+┌─────────────────┬───────────┬──────────────────────────────────────────────┬──────────┬───────┬─────────┐
+│ Model           │ Dataset   │ Metric                                       │ Subset   │   Num │ Score   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_strict:mean)        │ default  │   100 │ 78%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_strict:weighted_mean) │ default  │   111 │ 79.3%   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_loose:mean)         │ default  │   100 │ 85%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_loose:weighted_mean)  │ default  │   111 │ 85.6%   │
+└─────────────────┴───────────┴──────────────────────────────────────────────┴──────────┴───────┴─────────┘ 
+
+2026-10-30 09:13:53 - evalscope - INFO: Skipping report analysis (`analysis_report=False`).
+2026-10-30 09:13:53 - evalscope - INFO: Dump report to: /root/eval/out_full_mtp3_b8/20261030_081534/reports/qwen3.8-27b-fp8/ifbench.json 
+
+2026-10-30 09:13:53 - evalscope - INFO: 
+ifbench perf table:
+Model            Dataset      Num  Avg Lat    Avg TTFT    Avg TPOT    Avg Thpt       Avg In    Avg Out
+---------------  ---------  -----  ---------  ----------  ----------  -----------  --------  ---------
+qwen3.8-27b-fp8  IFBench      100  252.858 s  —           —           20.56 tok/s       133       5198
+
+2026-10-30 09:13:53 - evalscope - INFO: Benchmark ifbench evaluation finished.
+2026-10-30 09:13:53 - evalscope - INFO: Running[eval] 100%| 1/1 [Elapsed: 58:18 < Remaining: 00:00, 3498.41s/benchmark]
+2026-10-30 09:13:53 - evalscope - INFO: Overall report table: 
+┌─────────────────┬───────────┬──────────────────────────────────────────────┬──────────┬───────┬─────────┐
+│ Model           │ Dataset   │ Metric                                       │ Subset   │   Num │ Score   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_strict:mean)        │ default  │   100 │ 78%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_strict:weighted_mean) │ default  │   111 │ 79.3%   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_loose:mean)         │ default  │   100 │ 85%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_loose:weighted_mean)  │ default  │   111 │ 85.6%   │
+└─────────────────┴───────────┴──────────────────────────────────────────────┴──────────┴───────┴─────────┘ 
+
+2026-10-30 09:13:53 - evalscope - INFO: Overall perf table: 
+Model            Dataset      Num  Avg Lat    Avg TTFT    Avg TPOT    Avg Thpt       Avg In    Avg Out
+---------------  ---------  -----  ---------  ----------  ----------  -----------  --------  ---------
+qwen3.8-27b-fp8  IFBench      100  252.858 s  —           —           20.56 tok/s       133       5198 
+
+2026-10-30 09:13:54 - evalscope - INFO: HTML report generated: /root/eval/out_full_mtp3_b8/20261030_081534/reports/report.html
+2026-10-30 09:13:54 - evalscope - INFO: Finished evaluation for qwen3.8-27b-fp8 on ['ifbench']
+2026-10-30 09:13:54 - evalscope - INFO: Output directory: /root/eval/out_full_mtp3_b8/20261030_081534

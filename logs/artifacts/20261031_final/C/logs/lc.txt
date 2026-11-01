@@ -1,0 +1,9 @@
+{"tag": "lc128", "c": 1, "requests": 4, "ok": 4, "wall_s": 10.76, "ttft_p50": 154.37, "ttft_p95": 155.64, "tpot_p50": 3.02, "tpot_p95": 10.98, "e2e_p50": 1.7, "e2e_p95": 5.77, "out_tok_s": 190.31, "isl": [128], "osl": [512], "seed": 141751609, "shared_prefix": 0}
+{"tag": "lc2048", "c": 1, "requests": 4, "ok": 4, "wall_s": 13.98, "ttft_p50": 451.32, "ttft_p95": 451.93, "tpot_p50": 2.98, "tpot_p95": 14.96, "e2e_p50": 1.97, "e2e_p95": 8.1, "out_tok_s": 146.49, "isl": [2048], "osl": [512], "seed": 769648432, "shared_prefix": 0}
+{"tag": "lc16384", "c": 1, "requests": 4, "ok": 4, "wall_s": 26.45, "ttft_p50": 3327.11, "ttft_p95": 3329.98, "tpot_p50": 4.8, "tpot_p95": 13.18, "e2e_p50": 5.78, "e2e_p95": 10.03, "out_tok_s": 77.43, "isl": [16384], "osl": [512], "seed": 1672839514, "shared_prefix": 0}
+{"tag": "lc32000", "c": 1, "requests": 6, "ok": 6, "wall_s": 64.13, "ttft_p50": 7345.01, "ttft_p95": 7387.87, "tpot_p50": 5.75, "tpot_p95": 12.57, "e2e_p50": 10.3, "e2e_p95": 13.77, "out_tok_s": 47.9, "isl": [32000], "osl": [512], "seed": 728781380, "shared_prefix": 0}
+{"tag": "lc32000", "c": 2, "requests": 6, "ok": 6, "wall_s": 56.62, "ttft_p50": 7400.47, "ttft_p95": 14673.29, "tpot_p50": 6.85, "tpot_p95": 52.44, "e2e_p50": 14.54, "e2e_p95": 35.79, "out_tok_s": 54.26, "isl": [32000], "osl": [512], "seed": 642868735, "shared_prefix": 0}
+47334 MiB
+{"tag": "lc60000", "c": 1, "requests": 6, "ok": 6, "wall_s": 125.77, "ttft_p50": 16456.54, "ttft_p95": 16467.06, "tpot_p50": 6.46, "tpot_p95": 20.84, "e2e_p50": 19.75, "e2e_p95": 27.1, "out_tok_s": 24.42, "isl": [60000], "osl": [512], "seed": 753234561, "shared_prefix": 0}
+{"tag": "lc60000", "c": 2, "requests": 6, "ok": 6, "wall_s": 117.4, "ttft_p50": 16519.62, "ttft_p95": 32938.9, "tpot_p50": 26.14, "tpot_p95": 84.77, "e2e_p50": 38.59, "e2e_p95": 59.84, "out_tok_s": 26.17, "isl": [60000], "osl": [512], "seed": 2020429376, "shared_prefix": 0}
+47334 MiB

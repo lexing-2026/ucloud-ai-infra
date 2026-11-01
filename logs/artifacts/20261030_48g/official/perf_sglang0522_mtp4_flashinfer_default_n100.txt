@@ -1,0 +1,462 @@
+# AI Infras 比赛评测报告
+
+- 模型：`qwen3.8-27b-fp8`
+- API：`http://127.0.0.1:30000/v1`
+- 开始：2026-10-30T12:23:41.194932+00:00
+- 结束：2026-10-30T13:03:30.716129+00:00
+- 总体状态：**完整**
+
+## 性能测试
+
+输入目标 8192 按内置 tiktoken/o200k_base 计数；OSL=512 按服务端计数；并发 1/2/4/8；每档预热 8 请求，不计入正式统计。
+延迟包含评测机到 API 的网络开销，不设置 TTFT/TPOT 达标门槛。
+
+| 并发 | 状态 | 成功请求 | 错误请求 | 请求/s | 输出 token/s |
+|---:|---|---:|---:|---:|---:|
+| 1 | 完整 | 100.0 | 0 | 0.11028 | 56.46 |
+| 2 | 完整 | 100.0 | 0 | 0.17793 | 91.10 |
+| 4 | 完整 | 100.0 | 0 | 0.25237 | 129.22 |
+| 8 | 完整 | 100.0 | 0 | 0.31501 | 161.29 |
+
+| 并发 | 服务端实际输入 token 均值 | 最小 | 最大 |
+|---:|---:|---:|---:|
+| 1 | 8192.0 | 8192 | 8192 |
+| 2 | 8192.0 | 8192 | 8192 |
+| 4 | 8192.0 | 8192 | 8192 |
+| 8 | 8192.0 | 8192 | 8192 |
+
+tiktoken 与模型分词可能不同，因此服务端实际 ISL 不保证等于 8192；上表使用服务端 usage。
+完整状态表示请求、输出长度和统计完整，不表示模型端 ISL 恰为 8192。
+
+| 并发 | 指标 | 平均 | P50 | P95 | P99 |
+|---:|---|---:|---:|---:|---:|
+| 1 | TTFT（秒） | 2.068 | 2.072 | 2.077 | 2.079 |
+| 1 | TPOT（毫秒/token） | 13.695 | 12.831 | 16.741 | 18.666 |
+| 1 | 端到端（秒） | 9.066 | 8.632 | 10.607 | 11.587 |
+| 2 | TTFT（秒） | 2.174 | 2.136 | 2.143 | 4.046 |
+| 2 | TPOT（毫秒/token） | 17.717 | 16.913 | 23.224 | 25.796 |
+| 2 | 端到端（秒） | 11.228 | 10.779 | 14.261 | 15.313 |
+| 4 | TTFT（秒） | 2.404 | 2.148 | 4.114 | 8.092 |
+| 4 | TPOT（毫秒/token） | 26.139 | 25.603 | 33.510 | 41.520 |
+| 4 | 端到端（秒） | 15.761 | 15.288 | 19.286 | 23.384 |
+| 8 | TTFT（秒） | 3.193 | 2.163 | 9.050 | 16.170 |
+| 8 | TPOT（毫秒/token） | 42.878 | 42.282 | 61.370 | 66.263 |
+| 8 | 端到端（秒） | 25.104 | 23.945 | 34.667 | 41.083 |
+
+TPOT 为每请求 `(端到端延迟 − TTFT)/(输出 token 数 − 1)` 后取百分位；不使用逐块间隔的 P95。
+使用相同确定性输入及顺序，每轮请求传独立 cache_salt 避免跨档缓存复用；未通过服务器遥测独立验证缓存命中。
+
+## IFBench 精度
+
+EvalScope 原生评测，limit=100，eval_batch_size=2；生成参数仅覆盖 `max_tokens=32768`，其余沿用工具默认值。
+本次未执行精度阶段。
+
+## 异常与证据
+
+- 未发现完整性异常。
+
+- [结构化汇总](summary.json)
+- [环境与依赖版本](environment.json)
+- [评测输入配置](configuration.json)
+- 性能原生结果：`performance/c{1,2,4,8}/`；完整输入及其摘要：`performance/dataset.*`。
+- 精度原生结果：`accuracy/native/`；输入配置及解析后的默认配置：`accuracy/task_config.json`、`accuracy/resolved_config.json`。
+
+工具固定为 AIPerf 0.13.0、EvalScope 1.13.0。结果仅适用于本次模型、API 路径、样本和网络环境。
+{
+  "started_at": "2026-10-30T12:23:41.194932+00:00",
+  "configuration": {
+    "mode": "perf",
+    "base_url": "http://127.0.0.1:30000/v1",
+    "model": "qwen3.8-27b-fp8",
+    "tokenizer": "builtin",
+    "tokenizer_revision": null,
+    "api_key_env": "OPENAI_API_KEY",
+    "output_dir": "/root/infer/outputs/perf_final_default_n100",
+    "env_dir": "/root/.cache/ai-infra-eval/envs",
+    "perf_requests": 100,
+    "eval_batch_size": 2,
+    "request_timeout": 600,
+    "seed": 42,
+    "dry_run": false,
+    "isl": 8192,
+    "osl": 512,
+    "concurrencies": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "warmup_requests": 8,
+    "accuracy_limit": 100,
+    "accuracy_generation_config": {
+      "max_tokens": 32768
+    }
+  },
+  "status": "完整",
+  "issues": [],
+  "performance": [
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 1,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2067.6423744599997,
+          "p50": 2072.1050345,
+          "p95": 2076.5103812499997,
+          "p99": 2078.74413404
+        },
+        "inter_token_latency": {
+          "mean": 13.695150262230918,
+          "p50": 12.83104691780822,
+          "p95": 16.74084099921722,
+          "p99": 18.666037466614494
+        },
+        "request_latency": {
+          "mean": 9065.864158459999,
+          "p50": 8632.0635625,
+          "p95": 10606.716344949999,
+          "p99": 11586.532130040006
+        }
+      },
+      "benchmark_duration": 906.78172672,
+      "request_throughput": 0.11027980446630774,
+      "output_token_throughput": 56.46325988674956,
+      "artifacts": "/root/infer/outputs/perf_final_default_n100/performance/c1"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 2,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2174.47267871,
+          "p50": 2135.6135695,
+          "p95": 2142.6210738,
+          "p99": 4046.1769802
+        },
+        "inter_token_latency": {
+          "mean": 17.716683114931506,
+          "p50": 16.91258942367906,
+          "p95": 23.224278734637963,
+          "p99": 25.79647511485324
+        },
+        "request_latency": {
+          "mean": 11227.69775044,
+          "p50": 10778.8874755,
+          "p95": 14261.314901299998,
+          "p99": 15313.030188950008
+        }
+      },
+      "benchmark_duration": 562.028198912,
+      "request_throughput": 0.1779261188923218,
+      "output_token_throughput": 91.09817287286876,
+      "artifacts": "/root/infer/outputs/perf_final_default_n100/performance/c2"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 4,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 2404.1498682799997,
+          "p50": 2147.502402,
+          "p95": 4113.9474595,
+          "p99": 8091.99639298
+        },
+        "inter_token_latency": {
+          "mean": 26.139132058297456,
+          "p50": 25.60278418590998,
+          "p95": 33.509741846966726,
+          "p99": 41.520430760684924
+        },
+        "request_latency": {
+          "mean": 15761.246350069998,
+          "p50": 15288.195708,
+          "p95": 19285.5156903,
+          "p99": 23383.694125230002
+        }
+      },
+      "benchmark_duration": 396.23579008,
+      "request_throughput": 0.2523731763552293,
+      "output_token_throughput": 129.2150662938774,
+      "artifacts": "/root/infer/outputs/perf_final_default_n100/performance/c4"
+    },
+    {
+      "status": "完整",
+      "issues": [],
+      "concurrency": 8,
+      "expected_requests": 100,
+      "records": 100,
+      "valid_records": 100,
+      "successful_requests": 100.0,
+      "error_requests": 0,
+      "lengths_verified": true,
+      "osl_verified": true,
+      "input_length_basis": "tiktoken/o200k_base",
+      "actual_input_tokens": {
+        "min": 8192,
+        "max": 8192,
+        "mean": 8192.0
+      },
+      "metrics": {
+        "time_to_first_token": {
+          "mean": 3193.42804133,
+          "p50": 2162.6102045,
+          "p95": 9050.319066399996,
+          "p99": 16169.59599913
+        },
+        "inter_token_latency": {
+          "mean": 42.87791323823874,
+          "p50": 42.28237221917808,
+          "p95": 61.36970943336594,
+          "p99": 66.26309543722121
+        },
+        "request_latency": {
+          "mean": 25104.04170607,
+          "p50": 23945.495812499998,
+          "p95": 34666.70833539999,
+          "p99": 41082.57865926001
+        }
+      },
+      "benchmark_duration": 317.443051776,
+      "request_throughput": 0.3150145310377131,
+      "output_token_throughput": 161.2874398913091,
+      "artifacts": "/root/infer/outputs/perf_final_default_n100/performance/c8"
+    }
+  ],
+  "ended_at": "2026-10-30T13:03:30.716129+00:00"
+}
+{
+  "mode": "perf",
+  "base_url": "http://127.0.0.1:30000/v1",
+  "model": "qwen3.8-27b-fp8",
+  "tokenizer": "builtin",
+  "tokenizer_revision": null,
+  "api_key_env": "OPENAI_API_KEY",
+  "output_dir": "/root/infer/outputs/perf_final_default_n100",
+  "env_dir": "/root/.cache/ai-infra-eval/envs",
+  "perf_requests": 100,
+  "eval_batch_size": 2,
+  "request_timeout": 600,
+  "seed": 42,
+  "dry_run": false,
+  "isl": 8192,
+  "osl": 512,
+  "concurrencies": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "warmup_requests": 8,
+  "accuracy_limit": 100,
+  "accuracy_generation_config": {
+    "max_tokens": 32768
+  }
+}
+{
+  "platform": "Linux-6.12.101-compshare-x86_64-with-glibc2.35",
+  "dependencies": {
+    "uv": "/usr/local/bin/uv",
+    "bootstrap_python": "/usr/local/bin/python3.12",
+    "python312": "/usr/local/bin/python3.12",
+    "tools": {
+      "perf": {
+        "ready": true,
+        "missing": [],
+        "version": "0.13.0",
+        "python_version": [
+          3,
+          12,
+          11
+        ],
+        "packages": {
+          "pytest-timeout": "2.4.0",
+          "annotated-types": "0.8.0",
+          "shellingham": "1.5.4",
+          "idna": "3.20",
+          "iniconfig": "2.3.1",
+          "propcache": "0.5.4",
+          "aiosqlite": "0.22.1",
+          "fastapi": "0.162.0",
+          "nest-asyncio": "1.6.0",
+          "logistro": "2.0.1",
+          "click": "8.5.0",
+          "pyparsing": "3.3.3",
+          "aiosignal": "1.4.0",
+          "pydantic-settings": "2.16.2",
+          "linkify-it-py": "2.2.0",
+          "requests": "2.34.2",
+          "python-multipart": "0.0.32",
+          "kaleido": "1.2.0",
+          "choreographer": "1.4.0",
+          "aiofiles": "24.1.0",
+          "urllib3": "2.8.0",
+          "ruamel.yaml": "0.18.17",
+          "charset-normalizer": "3.5.2",
+          "python-dotenv": "1.2.4",
+          "PyYAML": "6.0.3",
+          "typer": "0.27.3",
+          "aiohappyeyeballs": "2.7.1",
+          "websockets": "17.3",
+          "typing-inspection": "0.4.4",
+          "opentelemetry-api": "1.45.2",
+          "retrying": "1.4.2",
+          "ffmpeg-python": "0.2.0",
+          "Werkzeug": "3.1.9",
+          "cycler": "0.12.1",
+          "starlette": "1.10.0",
+          "nvidia-ml-py": "13.615.71",
+          "platformdirs": "4.14.0",
+          "cffi": "2.1.1",
+          "zipp": "4.1.2",
+          "anyio": "4.15.1",
+          "multiprocess": "0.70.19",
+          "jsonpointer": "3.6",
+          "mdit-py-plugins": "0.6.1",
+          "Jinja2": "3.1.6",
+          "tqdm": "4.70.1",
+          "Flask": "3.1.3",
+          "MarkupSafe": "3.0.4",
+          "alembic": "1.20.1",
+          "ruamel.yaml.clib": "0.2.15",
+          "cyclopts": "4.25.3",
+          "docstring_parser": "0.18.0",
+          "h11": "0.16.0",
+          "brotli": "1.2.1",
+          "pyzmq": "26.4.0",
+          "prometheus_client": "0.23.1",
+          "colorlog": "6.12.0",
+          "itsdangerous": "2.2.0",
+          "starlette-compress": "2.0.0",
+          "yarl": "1.25.1",
+          "annotated-doc": "0.0.5",
+          "kopf": "1.45.2",
+          "fsspec": "2026.7.0",
+          "typing_extensions": "4.16.0",
+          "soundfile": "0.13.1",
+          "pycparser": "3.12",
+          "blinker": "1.9.0",
+          "frozenlist": "1.8.0",
+          "kiwisolver": "1.5.1",
+          "packaging": "26.3",
+          "tiktoken": "0.14.0",
+          "pluggy": "1.7.0",
+          "psutil": "7.0.0",
+          "filelock": "4.2.4",
+          "uvicorn": "0.54.0",
+          "python-dateutil": "3.0.0",
+          "msgspec": "0.22.0",
+          "dill": "0.4.1",
+          "httpcore": "1.0.9",
+          "rich-rst": "2.2.0",
+          "regex": "2026.9.29",
+          "watchfiles": "1.3.0",
+          "dash-bootstrap-components": "2.0.4",
+          "jmespath": "1.0.1",
+          "rich": "14.1.0",
+          "orjson": "3.11.9",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0",
+          "six": "1.17.0",
+          "Mako": "1.4.3",
+          "python-json-logger": "4.2.0",
+          "markdown-it-py": "4.2.0",
+          "simplejson": "4.2.0",
+          "pydantic_core": "2.50.2",
+          "importlib_metadata": "10.1.0",
+          "certifi": "2026.10.23",
+          "pydantic": "2.14.2",
+          "mdurl": "0.1.2",
+          "setproctitle": "1.3.8",
+          "iso8601": "2.1.0",
+          "contourpy": "1.4.0",
+          "crick": "0.0.8",
+          "jsonpatch": "1.38",
+          "attrs": "26.1.0",
+          "pytest": "9.2.0",
+          "protobuf": "7.36.2",
+          "multidict": "7.2.1",
+          "httpx": "0.28.1",
+          "textual": "5.3.0",
+          "httptools": "0.9.0",
+          "narwhals": "2.28.0",
+          "seaborn": "0.13.2",
+          "zstandard": "0.25.0",
+          "huggingface_hub": "1.33.0",
+          "sentencepiece": "0.2.2",
+          "uvloop": "0.23.0",
+          "pillow": "12.3.0",
+          "Pygments": "2.21.0",
+          "datasets": "5.1.0",
+          "pytz": "2026.6",
+          "xxhash": "4.0.2",
+          "hf-xet": "1.7.1",
+          "matplotlib": "3.11.2",
+          "optuna": "5.0.0",
+          "future": "1.0.0",
+          "aiohttp": "3.14.5",
+          "dash": "3.1.1",
+          "tzdata": "2026.6",
+          "aiperf": "0.13.0",
+          "setuptools": "84.2.1",
+          "pandas": "2.3.3",
+          "SQLAlchemy": "2.1.6",
+          "fonttools": "4.68.0",
+          "pyarrow": "26.0.0",
+          "kubernetes_asyncio": "32.3.2",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "plotly": "6.4.0",
+          "transformers": "5.22.0"
+        },
+        "python": "/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/python"
+      }
+    },
+    "global_commands": {
+      "aiperf": null,
+      "evalscope": null
+    }
+  },
+  "created_at": "2026-10-30T12:23:41.194630+00:00"
+}

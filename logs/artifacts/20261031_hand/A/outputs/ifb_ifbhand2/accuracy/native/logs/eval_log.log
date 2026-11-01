@@ -1,0 +1,164 @@
+2026-10-31 09:04:35 - evalscope - INFO: Running with native backend
+2026-10-31 09:04:35 - evalscope - INFO: Dump task config to /root/infer/outputs/ifb_ifbhand2/accuracy/native/configs/task_config.yaml
+2026-10-31 09:04:35 - evalscope - INFO: {
+    "model_id": "qwen3.8-27b-fp8",
+    "model_args": {},
+    "model_task": "text_generation",
+    "chat_template": null,
+    "datasets": [
+        "ifbench"
+    ],
+    "dataset_args": {},
+    "dataset_dir": "/root/.cache/modelscope/hub/datasets",
+    "dataset_hub": "modelscope",
+    "repeats": 1,
+    "eval_type": "openai_api",
+    "eval_backend": "Native",
+    "eval_config": null,
+    "limit": 100,
+    "eval_batch_size": 2,
+    "use_cache": null,
+    "rerun_review": false,
+    "work_dir": "/root/infer/outputs/ifb_ifbhand2/accuracy/native",
+    "no_timestamp": true,
+    "enable_progress_tracker": false,
+    "ignore_errors": false,
+    "debug": false,
+    "seed": 42,
+    "api_url": "http://127.0.0.1:30000/v1",
+    "api_key": "**********",
+    "timeout": null,
+    "stream": null,
+    "judge": {
+        "strategy": "auto",
+        "models": [],
+        "contract": {
+            "system_prompt": null,
+            "prompt_template": null,
+            "score_mapping": null,
+            "score_type": "pattern"
+        },
+        "repeats": 1,
+        "position_swap": "auto",
+        "aggregation": "mean",
+        "min_valid_judges": 1
+    },
+    "analysis_report": false,
+    "collect_perf": true,
+    "use_sandbox": false,
+    "sandbox_type": "docker",
+    "sandbox_manager_config": {},
+    "evalscope_version": "1.13.0",
+    "model": "qwen3.8-27b-fp8",
+    "generation_config": {
+        "batch_size": 2,
+        "max_tokens": 32768
+    },
+    "sandbox": {
+        "enabled": false,
+        "engine": "docker",
+        "default_config": {},
+        "manager_config": {},
+        "pool_size": null
+    },
+    "agent_config": null
+}
+2026-10-31 09:04:35 - evalscope - INFO: Start loading benchmark dataset: ifbench
+2026-10-31 09:04:35 - evalscope - WARNING: ifbench: 100 samples to evaluate (1 subset, --limit=100 per subset). Remove `--limit` for a formal evaluation.
+2026-10-31 09:04:35 - evalscope - INFO: Subsets of ifbench: ['default']
+2026-10-31 09:04:35 - evalscope - INFO: Loading model for prediction...
+2026-10-31 09:04:35 - evalscope - INFO: Creating model qwen3.8-27b-fp8 with eval_type=openai_api base_url=http://127.0.0.1:30000/v1, config={'retries': 5, 'retry_interval': 10, 'batch_size': 2, 'max_tokens': 32768, 'anthropic_cache_strategy': 'evaluation'}, model_args={}
+2026-10-31 09:04:36 - evalscope - INFO: Model loaded successfully.
+2026-10-31 09:05:35 - evalscope - INFO: Evaluating[ifbench]   3%| 3/100 [Elapsed: 01:00 < Remaining: 28:33, 17.67s/it]
+2026-10-31 09:06:36 - evalscope - INFO: Evaluating[ifbench]   5%| 5/100 [Elapsed: 02:00 < Remaining: 33:40, 21.26s/it]
+2026-10-31 09:07:36 - evalscope - INFO: Evaluating[ifbench]  10%| 10/100 [Elapsed: 03:00 < Remaining: 17:43, 11.82s/it]
+2026-10-31 09:08:36 - evalscope - INFO: Evaluating[ifbench]  11%| 11/100 [Elapsed: 04:00 < Remaining: 38:29, 25.95s/it]
+2026-10-31 09:09:36 - evalscope - INFO: Evaluating[ifbench]  13%| 13/100 [Elapsed: 05:00 < Remaining: 38:19, 26.43s/it]
+2026-10-31 09:10:36 - evalscope - INFO: Evaluating[ifbench]  22%| 22/100 [Elapsed: 06:00 < Remaining: 10:14,  7.88s/it]
+2026-10-31 09:11:36 - evalscope - INFO: Evaluating[ifbench]  27%| 27/100 [Elapsed: 07:00 < Remaining: 15:48, 12.99s/it]
+2026-10-31 09:12:36 - evalscope - INFO: Evaluating[ifbench]  30%| 30/100 [Elapsed: 08:00 < Remaining: 15:03, 12.91s/it]
+2026-10-31 09:13:36 - evalscope - INFO: Evaluating[ifbench]  31%| 31/100 [Elapsed: 09:00 < Remaining: 32:05, 27.91s/it]
+2026-10-31 09:14:36 - evalscope - INFO: Evaluating[ifbench]  35%| 35/100 [Elapsed: 10:00 < Remaining: 19:58, 18.44s/it]
+2026-10-31 09:15:36 - evalscope - INFO: Evaluating[ifbench]  35%| 35/100 [Elapsed: 11:00 < Remaining: 19:58, 18.44s/it]
+2026-10-31 09:16:36 - evalscope - INFO: Evaluating[ifbench]  35%| 35/100 [Elapsed: 12:00 < Remaining: 19:58, 18.44s/it]
+2026-10-31 09:17:36 - evalscope - INFO: Evaluating[ifbench]  35%| 35/100 [Elapsed: 13:00 < Remaining: 19:58, 18.44s/it]
+2026-10-31 09:18:36 - evalscope - INFO: Evaluating[ifbench]  37%| 37/100 [Elapsed: 14:00 < Remaining: 1:06:32, 63.37s/it]
+2026-10-31 09:19:36 - evalscope - INFO: Evaluating[ifbench]  37%| 37/100 [Elapsed: 15:00 < Remaining: 1:06:32, 63.37s/it]
+2026-10-31 09:20:36 - evalscope - INFO: Evaluating[ifbench]  39%| 39/100 [Elapsed: 16:00 < Remaining: 50:58, 50.13s/it]
+2026-10-31 09:21:36 - evalscope - INFO: Evaluating[ifbench]  39%| 39/100 [Elapsed: 17:00 < Remaining: 50:58, 50.13s/it]
+2026-10-31 09:22:36 - evalscope - INFO: Evaluating[ifbench]  46%| 46/100 [Elapsed: 18:00 < Remaining: 15:51, 17.63s/it]
+2026-10-31 09:23:36 - evalscope - INFO: Evaluating[ifbench]  48%| 48/100 [Elapsed: 19:00 < Remaining: 11:06, 12.82s/it]
+2026-10-31 09:24:36 - evalscope - INFO: Evaluating[ifbench]  50%| 50/100 [Elapsed: 20:00 < Remaining: 19:03, 22.86s/it]
+2026-10-31 09:25:36 - evalscope - INFO: Evaluating[ifbench]  51%| 51/100 [Elapsed: 21:00 < Remaining: 27:23, 33.54s/it]
+2026-10-31 09:26:36 - evalscope - INFO: Evaluating[ifbench]  53%| 53/100 [Elapsed: 22:00 < Remaining: 26:31, 33.86s/it]
+2026-10-31 09:27:36 - evalscope - INFO: Evaluating[ifbench]  56%| 56/100 [Elapsed: 23:00 < Remaining: 16:15, 22.16s/it]
+2026-10-31 09:28:36 - evalscope - INFO: Evaluating[ifbench]  58%| 58/100 [Elapsed: 24:01 < Remaining: 19:58, 28.52s/it]
+2026-10-31 09:29:37 - evalscope - INFO: Evaluating[ifbench]  67%| 67/100 [Elapsed: 25:01 < Remaining: 04:36,  8.39s/it]
+2026-10-31 09:30:37 - evalscope - INFO: Evaluating[ifbench]  70%| 70/100 [Elapsed: 26:01 < Remaining: 07:49, 15.66s/it]
+2026-10-31 09:31:37 - evalscope - INFO: Evaluating[ifbench]  74%| 74/100 [Elapsed: 27:01 < Remaining: 05:31, 12.74s/it]
+2026-10-31 09:32:37 - evalscope - INFO: Evaluating[ifbench]  75%| 75/100 [Elapsed: 28:01 < Remaining: 09:43, 23.32s/it]
+2026-10-31 09:33:37 - evalscope - INFO: Evaluating[ifbench]  77%| 77/100 [Elapsed: 29:01 < Remaining: 09:42, 25.32s/it]
+2026-10-31 09:34:37 - evalscope - INFO: Evaluating[ifbench]  80%| 80/100 [Elapsed: 30:01 < Remaining: 08:46, 26.31s/it]
+2026-10-31 09:35:37 - evalscope - INFO: Evaluating[ifbench]  80%| 80/100 [Elapsed: 31:01 < Remaining: 08:46, 26.31s/it]
+2026-10-31 09:36:37 - evalscope - INFO: Evaluating[ifbench]  81%| 81/100 [Elapsed: 32:01 < Remaining: 12:06, 38.22s/it]
+2026-10-31 09:37:37 - evalscope - INFO: Evaluating[ifbench]  81%| 81/100 [Elapsed: 33:01 < Remaining: 12:06, 38.22s/it]
+2026-10-31 09:38:37 - evalscope - INFO: Evaluating[ifbench]  83%| 83/100 [Elapsed: 34:01 < Remaining: 13:16, 46.87s/it]
+2026-10-31 09:39:37 - evalscope - INFO: Evaluating[ifbench]  86%| 86/100 [Elapsed: 35:01 < Remaining: 08:02, 34.48s/it]
+2026-10-31 09:40:37 - evalscope - INFO: Evaluating[ifbench]  87%| 87/100 [Elapsed: 36:01 < Remaining: 06:31, 30.14s/it]
+2026-10-31 09:41:37 - evalscope - INFO: Evaluating[ifbench]  88%| 88/100 [Elapsed: 37:01 < Remaining: 07:38, 38.20s/it]
+2026-10-31 09:42:37 - evalscope - INFO: Evaluating[ifbench]  89%| 89/100 [Elapsed: 38:01 < Remaining: 09:24, 51.34s/it]
+2026-10-31 09:43:37 - evalscope - INFO: Evaluating[ifbench]  89%| 89/100 [Elapsed: 39:01 < Remaining: 09:24, 51.34s/it]
+2026-10-31 09:44:37 - evalscope - INFO: Evaluating[ifbench]  91%| 91/100 [Elapsed: 40:01 < Remaining: 08:19, 55.52s/it]
+2026-10-31 09:45:37 - evalscope - INFO: Evaluating[ifbench]  92%| 92/100 [Elapsed: 41:01 < Remaining: 06:37, 49.67s/it]
+2026-10-31 09:46:37 - evalscope - INFO: Evaluating[ifbench]  94%| 94/100 [Elapsed: 42:01 < Remaining: 03:52, 38.80s/it]
+2026-10-31 09:47:37 - evalscope - INFO: Evaluating[ifbench]  98%| 98/100 [Elapsed: 43:01 < Remaining: 00:43, 21.97s/it]
+2026-10-31 09:47:57 - evalscope - INFO: Evaluating[ifbench] 100%| 100/100 [Elapsed: 43:21 < Remaining: 00:00, 17.88s/it]
+2026-10-31 09:47:57 - evalscope - INFO: ifbench: predictions complete, aggregating scores...
+2026-10-31 09:47:57 - evalscope - INFO: Aggregating scores for subset: default
+2026-10-31 09:47:57 - evalscope - INFO: Generating report...
+2026-10-31 09:47:57 - evalscope - INFO: 
+ifbench report table:
+┌─────────────────┬───────────┬──────────────────────────────────────────────┬──────────┬───────┬─────────┐
+│ Model           │ Dataset   │ Metric                                       │ Subset   │   Num │ Score   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_strict:mean)        │ default  │   100 │ 80%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_strict:weighted_mean) │ default  │   111 │ 80.2%   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_loose:mean)         │ default  │   100 │ 89%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_loose:weighted_mean)  │ default  │   111 │ 88.3%   │
+└─────────────────┴───────────┴──────────────────────────────────────────────┴──────────┴───────┴─────────┘ 
+
+2026-10-31 09:47:57 - evalscope - INFO: Skipping report analysis (`analysis_report=False`).
+2026-10-31 09:47:57 - evalscope - INFO: Dump report to: /root/infer/outputs/ifb_ifbhand2/accuracy/native/reports/qwen3.8-27b-fp8/ifbench.json 
+
+2026-10-31 09:47:57 - evalscope - INFO: 
+ifbench perf table:
+Model            Dataset      Num  Avg Lat    Avg TTFT    Avg TPOT    Avg Thpt       Avg In    Avg Out
+---------------  ---------  -----  ---------  ----------  ----------  -----------  --------  ---------
+qwen3.8-27b-fp8  IFBench      100  51.452 s   —           —           95.84 tok/s       133       4931
+
+2026-10-31 09:47:57 - evalscope - INFO: Benchmark ifbench evaluation finished.
+2026-10-31 09:47:57 - evalscope - INFO: Running[eval] 100%| 1/1 [Elapsed: 43:21 < Remaining: 00:00, 2601.72s/benchmark]
+2026-10-31 09:47:57 - evalscope - INFO: Overall report table: 
+┌─────────────────┬───────────┬──────────────────────────────────────────────┬──────────┬───────┬─────────┐
+│ Model           │ Dataset   │ Metric                                       │ Subset   │   Num │ Score   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_strict:mean)        │ default  │   100 │ 80%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_strict:weighted_mean) │ default  │   111 │ 80.2%   │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (prompt_level_loose:mean)         │ default  │   100 │ 89%     │
+├─────────────────┼───────────┼──────────────────────────────────────────────┼──────────┼───────┼─────────┤
+│ qwen3.8-27b-fp8 │ IFBench   │ Accuracy ↑ (inst_level_loose:weighted_mean)  │ default  │   111 │ 88.3%   │
+└─────────────────┴───────────┴──────────────────────────────────────────────┴──────────┴───────┴─────────┘ 
+
+2026-10-31 09:47:57 - evalscope - INFO: Overall perf table: 
+Model            Dataset      Num  Avg Lat    Avg TTFT    Avg TPOT    Avg Thpt       Avg In    Avg Out
+---------------  ---------  -----  ---------  ----------  ----------  -----------  --------  ---------
+qwen3.8-27b-fp8  IFBench      100  51.452 s   —           —           95.84 tok/s       133       4931 
+
+2026-10-31 09:47:58 - evalscope - INFO: HTML report generated: /root/infer/outputs/ifb_ifbhand2/accuracy/native/reports/report.html
+2026-10-31 09:47:58 - evalscope - INFO: Finished evaluation for qwen3.8-27b-fp8 on ['ifbench']
+2026-10-31 09:47:58 - evalscope - INFO: Output directory: /root/infer/outputs/ifb_ifbhand2/accuracy/native

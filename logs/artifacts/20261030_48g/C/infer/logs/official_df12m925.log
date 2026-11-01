@@ -1,0 +1,5 @@
+使用内置 tiktoken/o200k_base：输入目标 8192 按 tiktoken 计数；服务端实际输入长度会单独列入报告。
+执行：/root/.cache/ai-infra-eval/envs/aiperf-0.13.0/bin/python /root/infer/eval/runner.py _dataset builtin '' /root/infer/outputs/perf_df12m925/performance/dataset.jsonl 29 42
+
+评测状态：异常
+Markdown 报告：/root/infer/outputs/perf_df12m925/report.md

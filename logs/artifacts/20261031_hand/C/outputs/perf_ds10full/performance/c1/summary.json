@@ -1,0 +1,42 @@
+{
+  "status": "完整",
+  "issues": [],
+  "concurrency": 1,
+  "expected_requests": 100,
+  "records": 100,
+  "valid_records": 100,
+  "successful_requests": 100.0,
+  "error_requests": 0,
+  "lengths_verified": true,
+  "osl_verified": true,
+  "input_length_basis": "tiktoken/o200k_base",
+  "actual_input_tokens": {
+    "min": 8192,
+    "max": 8192,
+    "mean": 8192.0
+  },
+  "metrics": {
+    "time_to_first_token": {
+      "mean": 1636.6594411899998,
+      "p50": 1639.484837,
+      "p95": 1640.97376185,
+      "p99": 1641.7065538499999
+    },
+    "inter_token_latency": {
+      "mean": 6.118415714266145,
+      "p50": 5.4211125694716245,
+      "p95": 10.722069135225047,
+      "p99": 12.910633074227011
+    },
+    "request_latency": {
+      "mean": 4763.16987118,
+      "p50": 4408.696629,
+      "p95": 7118.864117949999,
+      "p99": 8238.987432530002
+    }
+  },
+  "benchmark_duration": 476.48296601600003,
+  "request_throughput": 0.20986990336338898,
+  "output_token_throughput": 107.45339052205516,
+  "artifacts": "/root/infer/outputs/perf_ds10full/performance/c1"
+}

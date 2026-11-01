@@ -1,0 +1,1 @@
+scripts/c_dflash.sh: line 8: 31953 Killed                  VENV=/root/infer/sg22 SPEC=dflash DRAFT_TOKENS=$dt MEM_FRAC=$mf EXTRA_ARGS="--speculative-draft-kv-cache-dtype fp8_e4m3" setsid nohup bash scripts/run_sglang_48g.sh > logs/s_$tag.log 2>&1 < /dev/null

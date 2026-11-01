@@ -1,0 +1,23 @@
+### seg12 draft=12 mem=0.9375 mamba=def/def
+1] Mamba Cache is allocated. max_mamba_cache_size: 40, conv_state size: 0.11GB, ssm_state size: 2.88GB intermediate_ssm_state_cache size: 7.59GB intermediate_conv_window_c
+1] max_total_num_tokens=73279, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=8, context_len=65536, available_gpu_mem=1.68 GB
+| 1 | 完整 | 20.0 | 0 | 0.25319 | 129.64 |
+| 2 | 完整 | 20.0 | 0 | 0.34453 | 176.40 |
+| 4 | 完整 | 20.0 | 0 | 0.40306 | 206.37 |
+| 8 | 完整 | 20.0 | 0 | 0.41985 | 214.96 |
+| 1 | TTFT（秒） | 1.724 | 1.725 | 1.729 | 1.730 |
+| 1 | TPOT（毫秒/token） | 4.351 | 4.031 | 5.770 | 7.417 |
+| 2 | TTFT（秒） | 1.937 | 1.774 | 3.401 | 3.417 |
+| 2 | TPOT（毫秒/token） | 7.534 | 7.638 | 8.730 | 9.372 |
+| 4 | TTFT（秒） | 2.532 | 1.786 | 6.793 | 6.809 |
+| 4 | TPOT（毫秒/token） | 14.057 | 14.740 | 27.381 | 29.303 |
+| 8 | TTFT（秒） | 6.492 | 5.368 | 12.135 | 15.800 |
+| 8 | TPOT（毫秒/token） | 22.131 | 23.109 | 31.354 | 38.139 |
+- 未发现完整性异常。
+0
+48228 MiB
+      1 #running-req: 7	accept len: 8.25, accept rate: 0.66
+      1 #running-req: 7	accept len: 8.10, accept rate: 0.65
+      1 #running-req: 7	accept len: 7.34, accept rate: 0.58
+      1 #running-req: 7	accept len: 6.81, accept rate: 0.53
+EXP_END

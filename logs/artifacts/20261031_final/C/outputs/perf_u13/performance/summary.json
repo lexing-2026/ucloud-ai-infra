@@ -1,0 +1,170 @@
+[
+  {
+    "status": "完整",
+    "issues": [],
+    "concurrency": 1,
+    "expected_requests": 20,
+    "records": 20,
+    "valid_records": 20,
+    "successful_requests": 20.0,
+    "error_requests": 0,
+    "lengths_verified": true,
+    "osl_verified": true,
+    "input_length_basis": "tiktoken/o200k_base",
+    "actual_input_tokens": {
+      "min": 8192,
+      "max": 8192,
+      "mean": 8192.0
+    },
+    "metrics": {
+      "time_to_first_token": {
+        "mean": 1625.71388075,
+        "p50": 1625.4643095000001,
+        "p95": 1629.4040852,
+        "p99": 1631.8308746399998
+      },
+      "inter_token_latency": {
+        "mean": 4.151880505479452,
+        "p50": 3.6175323258317027,
+        "p95": 5.709331422113502,
+        "p99": 5.764372397925635
+      },
+      "request_latency": {
+        "mean": 3747.3248190500003,
+        "p50": 3470.2441039999994,
+        "p95": 4543.0036143,
+        "p99": 4572.21984286
+      }
+    },
+    "benchmark_duration": 74.99315302400001,
+    "request_throughput": 0.26667991029324906,
+    "output_token_throughput": 136.54011407014352,
+    "artifacts": "/root/infer/outputs/perf_u13/performance/c1"
+  },
+  {
+    "status": "完整",
+    "issues": [],
+    "concurrency": 2,
+    "expected_requests": 20,
+    "records": 20,
+    "valid_records": 20,
+    "successful_requests": 20.0,
+    "error_requests": 0,
+    "lengths_verified": true,
+    "osl_verified": true,
+    "input_length_basis": "tiktoken/o200k_base",
+    "actual_input_tokens": {
+      "min": 8192,
+      "max": 8192,
+      "mean": 8192.0
+    },
+    "metrics": {
+      "time_to_first_token": {
+        "mean": 1978.9368067999999,
+        "p50": 1668.1600329999999,
+        "p95": 3226.5053772999995,
+        "p99": 3238.75459066
+      },
+      "inter_token_latency": {
+        "mean": 6.600307506653619,
+        "p50": 6.907644471624266,
+        "p95": 9.79115963082192,
+        "p99": 10.77098873399217
+      },
+      "request_latency": {
+        "mean": 5351.6939427,
+        "p50": 5252.3037365,
+        "p95": 7229.1164088,
+        "p99": 7283.359201759999
+      }
+    },
+    "benchmark_duration": 54.019561728000006,
+    "request_throughput": 0.37021904106117504,
+    "output_token_throughput": 189.55214902332162,
+    "artifacts": "/root/infer/outputs/perf_u13/performance/c2"
+  },
+  {
+    "status": "完整",
+    "issues": [],
+    "concurrency": 4,
+    "expected_requests": 20,
+    "records": 20,
+    "valid_records": 20,
+    "successful_requests": 20.0,
+    "error_requests": 0,
+    "lengths_verified": true,
+    "osl_verified": true,
+    "input_length_basis": "tiktoken/o200k_base",
+    "actual_input_tokens": {
+      "min": 8192,
+      "max": 8192,
+      "mean": 8192.0
+    },
+    "metrics": {
+      "time_to_first_token": {
+        "mean": 3410.1453454999996,
+        "p50": 3261.9227134999996,
+        "p95": 6401.51037235,
+        "p99": 6419.52403447
+      },
+      "inter_token_latency": {
+        "mean": 10.814909963796477,
+        "p50": 10.759871837573385,
+        "p95": 18.533710092759296,
+        "p99": 19.300682056125243
+      },
+      "request_latency": {
+        "mean": 8936.564337,
+        "p50": 8550.6396905,
+        "p95": 13880.8322869,
+        "p99": 14598.475737379998
+      }
+    },
+    "benchmark_duration": 46.974452480000004,
+    "request_throughput": 0.42572044561867967,
+    "output_token_throughput": 217.968868156764,
+    "artifacts": "/root/infer/outputs/perf_u13/performance/c4"
+  },
+  {
+    "status": "完整",
+    "issues": [],
+    "concurrency": 8,
+    "expected_requests": 20,
+    "records": 20,
+    "valid_records": 20,
+    "successful_requests": 20.0,
+    "error_requests": 0,
+    "lengths_verified": true,
+    "osl_verified": true,
+    "input_length_basis": "tiktoken/o200k_base",
+    "actual_input_tokens": {
+      "min": 8192,
+      "max": 8192,
+      "mean": 8192.0
+    },
+    "metrics": {
+      "time_to_first_token": {
+        "mean": 6071.51007375,
+        "p50": 4986.8074355,
+        "p95": 11507.971945900003,
+        "p99": 15855.03377637999
+      },
+      "inter_token_latency": {
+        "mean": 20.14114246917808,
+        "p50": 18.08691291878669,
+        "p95": 35.72686720127203,
+        "p99": 45.92617909974558
+      },
+      "request_latency": {
+        "mean": 16363.6338755,
+        "p50": 13983.863471,
+        "p95": 28222.488540050002,
+        "p99": 32032.703016809992
+      }
+    },
+    "benchmark_duration": 42.915503616,
+    "request_throughput": 0.4659886145461272,
+    "output_token_throughput": 238.58617064761714,
+    "artifacts": "/root/infer/outputs/perf_u13/performance/c8"
+  }
+]
