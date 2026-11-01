@@ -106,7 +106,6 @@ docs/REPRODUCTION.md                   完整复验材料包
 docs/DEMO.md                           现场演示与备用录屏
 docs/EVIDENCE_INDEX.md                 原始数据索引（脚本生成）
 docs/eval/                             官方评测工具
-docs/defense/                          答辩 PPT（tex / pdf / html）
 dashboard/                             AIPerf + Prometheus + Grafana 演示看板
 logs/artifacts/20261030_48g/official/  官方评测原始结果
 logs/artifacts/20261031_hand/          手写算子微基准、搜索记录与最终运行结果
